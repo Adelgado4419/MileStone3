@@ -14,13 +14,4 @@ const App = () => {
         </BrowserRouter>
     )
 }
-
-// function App() {
-//     return (
-//         <div>
-//         </div>
-
-//     );
-// }
-
 export default App;
