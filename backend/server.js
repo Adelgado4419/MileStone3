@@ -13,7 +13,7 @@ app.use(cookieSession({
     maxAge: 24* 60 * 60 * 1000
 }))
 app.use(cors({
-    origin: 'https://localhost:3000',
+    origin: 'http://localhost:3000',
     credentials: true
 }))
 app.use(express.static('public'))

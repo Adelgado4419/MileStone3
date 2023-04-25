@@ -9,38 +9,38 @@ module.exports = (sequelize, DataTypes) => {
   }
   User.init({
     id: {
-      allowNull: false,
+      // allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER
     },
     username: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     first_name:{
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     last_name:{
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     }, 
     gender:{
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     }, 
     dateOfBirth:{
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     }
   }, {
     sequelize,

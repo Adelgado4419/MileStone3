@@ -26,7 +26,6 @@ function SignUpForm() {
 			},
 			body: JSON.stringify(user)
 		})
-
 	}
 
 	return (
