@@ -23,9 +23,12 @@ app.use(express.urlencoded({ extended: true }))
 
 // Controllers & Routes
 
-app.use('/users', require('./controllers/users'))
+// app.use('/users', require('./controllers/users'))
+
+const userController = require('./Controllers/User_controller.js')
+app.use('/api', userController)
 
 // Listen for Connections
-app.listen(process.env.PORT, () => {
-    console.log(`Listening on ${process.env.PORT}`)
+app.listen(4000, () => {
+    console.log(`Listening on 4000`)
 })

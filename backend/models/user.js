@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    user_id: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -22,20 +22,8 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    hashed_password: {
+    password: {
       type: DataTypes.STRING,
-      allowNull: false,
-    },
-    dob_day: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    dob_month: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    dob_year: {
-      type: DataTypes.INTEGER,
       allowNull: false,
     },
     first_name:{
@@ -50,10 +38,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     }, 
-    interest:{
+    dateOfBirth:{
       type: DataTypes.STRING,
       allowNull: false,
-    } 
+    }
   }, {
     sequelize,
     modelName: 'User',
