@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
 body {
-  background-color: #1B98FC;
-  font-family: Trebuchet MS, Arial, sans-serif;
+  background-color: #000000;
+  font-family: "Chewy", cursive;
+  color: #B8E2ED;
 }
 
 /*# sourceMappingURL=style.css.map */
