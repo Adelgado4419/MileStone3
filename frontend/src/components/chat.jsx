@@ -1,11 +1,10 @@
-const chat = () => {
+const Chat = () => {
     return (
     
-            <div className="chat">
-                
-            </div>
-        
+    <div className="chat-display">
+    
+    </div>
     )
 }
 
-export default chat
+export default Chat
