@@ -1,8 +1,8 @@
-function CreateAccount() {
+function SignUp() {
     return ( <div>
         Create Account
     </div>
     )
 }
 
-export default CreateAccount
+export default SignUp
