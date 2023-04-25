@@ -22,9 +22,6 @@ app.use(bodyParser.json())
 app.use(express.urlencoded({ extended: true }))
 
 // Controllers & Routes
-
-// app.use('/users', require('./controllers/users'))
-
 const userController = require('./Controllers/User_controller.js')
 app.use('/api', userController)
 
