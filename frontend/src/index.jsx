@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './css/style.css'
-import Home from './Home';
-import Dashboard from './Dashboard';
-import CreateAccount from './CreateAccount';
 import App from './App';
 
 
