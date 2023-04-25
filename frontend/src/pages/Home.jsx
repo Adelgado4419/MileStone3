@@ -1,9 +1,9 @@
-import './App.css';
+import Nav from "../components/nav"
 
 function Home() {
   return (
     <div>
-
+        <Nav/>
         <p>
           Fantasy Tinder
         </p>

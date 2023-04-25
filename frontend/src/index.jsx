@@ -4,18 +4,12 @@ import './css/style.css'
 import Home from './Home';
 import Dashboard from './Dashboard';
 import CreateAccount from './CreateAccount';
+import App from './App';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home />
-    <Dashboard/>
-    <CreateAccount/>
+    <App/>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();

@@ -4,26 +4,61 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
-
-    static associate({ Comment }) {
-      User.hasMany(Comment, { as: 'author', foreignKey: 'author_id' })
+    static associate(models) {
     }
-
-  };
+  }
   User.init({
-    userId: {
-      type: DataTypes.SMALLINT,
+    id: {
+      allowNull: false,
+      autoIncrement: true,
       primaryKey: true,
-      autoIncrement: true
-
+      type: DataTypes.INTEGER
     },
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
-    email: DataTypes.STRING
+    user_id: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    hashed_password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    dob_day: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    dob_month: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    dob_year: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    first_name:{
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    last_name:{
+      type: DataTypes.STRING,
+      allowNull: false,
+    }, 
+    gender:{
+      type: DataTypes.STRING,
+      allowNull: false,
+    }, 
+    interest:{
+      type: DataTypes.STRING,
+      allowNull: false,
+    } 
   }, {
     sequelize,
-    underscored: true,
     modelName: 'User',
+    tableName: 'users',
+    timestamps: false
   });
   return User;
 };
