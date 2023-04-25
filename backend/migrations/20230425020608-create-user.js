@@ -9,23 +9,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      user_id: {
+      username: {
         type: Sequelize.STRING
       },
       email: {
         type: Sequelize.STRING
       },
-      hashed_password: {
+      password: {
         type: Sequelize.STRING
-      },
-      dob_day: {
-        type: Sequelize.INTEGER
-      },
-      dob_month: {
-        type: Sequelize.INTEGER
-      },
-      dob_year: {
-        type: Sequelize.INTEGER
       },
       first_name: {
         type: Sequelize.STRING
@@ -36,9 +27,9 @@ module.exports = {
       gender: {
         type: Sequelize.STRING
       },
-      interest: {
+      dateOfBirth: {
         type: Sequelize.STRING
-      },
+      }
     });
   },
   async down(queryInterface, Sequelize) {

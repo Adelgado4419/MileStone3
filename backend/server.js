@@ -13,7 +13,7 @@ app.use(cookieSession({
     maxAge: 24* 60 * 60 * 1000
 }))
 app.use(cors({
-    origin: 'https://localhost:3000',
+    origin: 'http://localhost:3000',
     credentials: true
 }))
 app.use(express.static('public'))
@@ -22,10 +22,10 @@ app.use(bodyParser.json())
 app.use(express.urlencoded({ extended: true }))
 
 // Controllers & Routes
-
-// app.use('/users', require('./controllers/users'))
+const userController = require('./Controllers/User_controller.js')
+app.use('/api', userController)
 
 // Listen for Connections
-app.listen(process.env.PORT, () => {
-    console.log(`Listening on ${process.env.PORT}`)
+app.listen(4000, () => {
+    console.log(`Listening on 4000`)
 })

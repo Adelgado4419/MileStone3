@@ -9,51 +9,39 @@ module.exports = (sequelize, DataTypes) => {
   }
   User.init({
     id: {
-      allowNull: false,
+      // allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    user_id: {
+    username: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
-    hashed_password: {
+    password: {
       type: DataTypes.STRING,
-      allowNull: false,
-    },
-    dob_day: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    dob_month: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    dob_year: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
+      // allowNull: false,
     },
     first_name:{
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     last_name:{
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     }, 
     gender:{
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     }, 
-    interest:{
+    dateOfBirth:{
       type: DataTypes.STRING,
-      allowNull: false,
-    } 
+      // allowNull: false,
+    }
   }, {
     sequelize,
     modelName: 'User',

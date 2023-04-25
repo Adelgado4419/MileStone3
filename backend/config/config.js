@@ -1,4 +1,6 @@
-{
+require('dotenv').config();
+
+module.exports ={
   "development": {
     "username": "postgres",
     "password": "Y4na8EstEs$",
