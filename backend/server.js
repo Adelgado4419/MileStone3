@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }))
 
 // Controllers & Routes
 
-app.use('/users', require('./controllers/users'))
+// app.use('/users', require('./controllers/users'))
 
 // Listen for Connections
 app.listen(process.env.PORT, () => {
