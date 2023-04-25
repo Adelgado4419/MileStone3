@@ -1,5 +1,4 @@
-
-const ChatInput = () => {
+const chatInput = () => {
  
 
     return (
@@ -9,4 +8,4 @@ const ChatInput = () => {
     )
 }
 
-export default ChatInput
+export default chatInput

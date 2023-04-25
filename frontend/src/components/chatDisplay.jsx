@@ -1,5 +1,5 @@
 
-const ChatDisplay = () => {
+const chatDisplay = () => {
     return (
         <div className="chat-display"> 
         
@@ -7,4 +7,4 @@ const ChatDisplay = () => {
     )
 }
 
-export default ChatDisplay
+export default chatDisplay

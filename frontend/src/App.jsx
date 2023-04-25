@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import CreateAccount from './pages/CreateAccount'
 import Dashboard from './pages/Dashboard'
-
+import "./index.css"
 const App = () => {
     return (
         <BrowserRouter>
