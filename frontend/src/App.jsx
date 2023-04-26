@@ -2,9 +2,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
 import SignUpForm from './pages/signupForm'
+import React from "react"
 
-const App = () => {
+
+export default function App() {
     return (
+        
         <BrowserRouter>
             <Routes>
                 <Route path= "/" element={<Home/>}/>
@@ -15,4 +18,5 @@ const App = () => {
     )
 }
 
-export default App;
+
+

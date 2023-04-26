@@ -1,10 +1,20 @@
-import Nav from "../components/nav"
 import { Link } from 'react-router-dom'
+import Nav from "../components/nav"
+import React, {useState} from "react"
+import LoginForm from "./loginForm"
+import "../index.css"
 
-function Home() {
+export default function Home() {
+
+  const [isShowLogin, setIsShowLogin] = useState(false)
+
+  const handleLoginClick = () => {
+      setIsShowLogin((isShowLogin) => !isShowLogin)
+  }
   return (
-    <div>
-        <Nav/>
+    <div className='App'>
+        <Nav handleLoginClick={handleLoginClick}/>
+        <LoginForm isShowLogin={isShowLogin} />
         <p>
           Fantasy Tinder
         </p>
@@ -15,4 +25,3 @@ function Home() {
   );
 }
 
-export default Home;

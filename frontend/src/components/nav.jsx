@@ -1,23 +1,22 @@
 import fanterlogo from "../images/fanterlogo.png";
+import React from "react";
 
-const Nav = () => {
+function Nav({ handleLoginClick }) {
     const handleClick = () => {
+        handleLoginClick()
     };
 
     return (
-    <nav>
-        <div className="logo-container">
-        <img className="logo" src={fanterlogo} alt="logo"
-        />
+    <div className="navbar">
+        {/* <div className="logo-container">
+            <img className="logo" src={fanterlogo} alt="logo"/>
+        </div> */}
+
+        <div>
+            <span
+                className="loginicon" onClick={handleClick}>Login</span>
         </div>
-        <button
-            className="nav-button"
-            onClick={handleClick}
-        >
-            Login
-        </button>
-        
-    </nav>
+    </div>
     );
 };
 export default Nav;
