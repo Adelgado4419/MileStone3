@@ -1,13 +1,16 @@
 import Nav from "../components/nav"
+import backdropv4 from '../assets/backdropv4.png'
 
 function Home() {
   return (
     <div>
         <Nav/>
-        <p>
-          Fantasy Tinder
-        </p>
-
+        <h1>
+          "Fantasy Tinder"
+        </h1>
+        
+        <img className="backdrop" src={backdropv4} alt="backdrop"/>
+        
     </div>
   );
 }

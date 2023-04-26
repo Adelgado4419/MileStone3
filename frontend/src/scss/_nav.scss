@@ -1,0 +1,85 @@
+@import "config";
+@import "media-queries";
+
+
+
+%align-center{
+    display: flex;
+    align-items: center;
+}
+
+
+.nav {
+    background: $tertiary-color;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem calc((100vw - 1200px) /2);
+    z-index: 10;
+    position: relative;
+
+    &__login {
+        display: flex;
+        color: $tertiary-color;
+        background-color: $secondary-color;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: none;
+        margin: 10px;
+        margin-left: 1150px;
+        object-fit: cover;
+        object-position: bottom;
+        text-align: right;
+        
+
+        &:hover {
+            color: $tertiary-color;
+            transition: all 0.3s ease;
+            background-color: white;
+        
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        border-radius: 25px;
+        height: 150px;
+        width: 150px;
+        @extend %align-center;
+    }
+
+    &__signup {
+        display: block;
+        color: $tertiary-color;
+        background-color: $secondary-color;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: none;
+        margin: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+        object-position: bottom;
+
+    &:hover {
+        color: $tertiary-color;
+        transition: all 0.3s ease;
+        background-color: white;
+    
+    }
+
+    
+
+    @include tablet {
+        position: absolute;
+        top: 22px;
+        right: 20px;
+        font-size: 2rem;
+        }
+    }
+}

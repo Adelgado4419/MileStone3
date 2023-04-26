@@ -1,8 +1,43 @@
 @import "config";
+@import "nav";
+@import 'media-queries';
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+}
 
 body {
     background-color: $primary-color;
-    font-family: $font-stack;
     color: $secondary-color;
   }
+
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+
+  @include mobile{
+      font-size: 1.5rem;
+          }
+  }
+
+
+.backdrop{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+    object-position: bottom;
+
+    @include mobile {
+        height: auto;
+        width: auto;
+    }
+
+}

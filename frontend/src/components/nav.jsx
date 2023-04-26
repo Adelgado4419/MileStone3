@@ -6,16 +6,26 @@ const Nav = () => {
 
     return (
     <nav>
+        <button
+            className="nav__login"
+            onClick={handleClick} >
+            Log In
+        </button>
         <div className="logo-container">
-        <img className="logo" src={fanterlogo} alt="logo"
+        <img className="nav__logo" src={fanterlogo} alt="logo"
         />
         </div>
+
+        <div></div>
+        
         <button
-            className="nav-button"
+            className="nav__signup"
             onClick={handleClick}
         >
-            Login
+            Sign Up
         </button>
+
+        
         
     </nav>
     );

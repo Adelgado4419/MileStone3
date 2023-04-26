@@ -1,8 +1,112 @@
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
+.nav__logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  background: #1B98FC;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+  z-index: 10;
+  position: relative;
+}
+.nav__login {
+  display: flex;
+  color: #1B98FC;
+  background-color: #B8E2ED;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+  margin-left: 1150px;
+  object-fit: cover;
+  object-position: bottom;
+  text-align: right;
+}
+.nav__login:hover {
+  color: #1B98FC;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+.nav__logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 25px;
+  height: 150px;
+  width: 150px;
+}
+.nav__signup {
+  display: block;
+  color: #1B98FC;
+  background-color: #B8E2ED;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  object-position: bottom;
+}
+.nav__signup:hover {
+  color: #1B98FC;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+@media screen and (max-width: 768px) {
+  .nav__signup {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    font-size: 2rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Handlee", cursive;
+}
+
 body {
   background-color: #000000;
-  font-family: "Handlee", cursive;
   color: #B8E2ED;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+@media screen and (max-width: 280px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.backdrop {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+  object-position: bottom;
+}
+@media screen and (max-width: 280px) {
+  .backdrop {
+    height: auto;
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
