@@ -1,3 +1,4 @@
+const bcrypt = require('bcrypt')
 const users = require('express').Router()
 const db = require('../models')
 const { User } = db
@@ -27,14 +28,16 @@ users.get('/:id', async (req, res) => {
 
 // CREATE NEW users
 users.post('/Users', async (req, res) => {
-    try {
-        const newUser = await User.create(req.body)
-        res.status(200).json({
-            data: newUser,
+    try{
+        let { password, ...rest } = req.body;
+        const user = await User.create({
+            ...rest,
+            passwordDigest: await bcrypt.hash(password, 10)
         })
-    } 
-    catch (err) {
-        res.status(500).json("server error")
+        res.json(user)
+
+    } catch (err){
+        res.status(500).send('server error')
         console.log(err)
     }
 })
