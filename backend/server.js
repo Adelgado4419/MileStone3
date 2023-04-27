@@ -1,31 +1,37 @@
 // Modules and Globals
-require('dotenv').config()
+
 const express = require('express')
-const bodyParser = require('body-parser')
-const cors = require('cors')
 const app = express();
+const cors = require('cors')
+const { sequelize } = require('sequelize')
+
 const cookieSession = require('cookie-session')
+const bodyParser = require('body-parser')
+
 
 // Express Settings
-app.use(cookieSession({
-    name: 'session',
-    keys:[process.env.SESSION_SECRET ],
-    maxAge: 24* 60 * 60 * 1000
-}))
-app.use(cors({
-    origin: 'http://localhost:3000',
-    credentials: true
-}))
-app.use(express.static('public'))
-app.use(express.urlencoded({ extended: true }))
+require('dotenv').config()
+
+// app.use(cookieSession({
+//     name: 'session',
+//     keys:[process.env.SESSION_SECRET ],
+//     maxAge: 24* 60 * 60 * 1000
+// }))
+
+app.use(cors())
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+
 app.use(bodyParser.json())
-app.use(express.urlencoded({ extended: true }))
 
 // Controllers & Routes
-const userController = require('./Controllers/User_controller.js')
-app.use('/api', userController)
+
+// app.use('/api', require('./Controllers/User_controller'))
+const usersController = require('./controllers/User_controller')
+app.use('/api', usersController)
+
 
 // Listen for Connections
-app.listen(4000, () => {
-    console.log(`Listening on 4000`)
+app.listen(4005, () => {
+    console.log(`Listening on 4005`)
 })
