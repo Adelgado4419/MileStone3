@@ -12,7 +12,6 @@ users.get('/', async (req,res) => {
         console.log(err)
     }
 })
-
 // get a users by id
 users.get('/:id', async (req, res) => {
     try {
@@ -27,7 +26,7 @@ users.get('/:id', async (req, res) => {
 })
 
 // CREATE NEW users
-users.post('/users', async (req, res) => {
+users.post('/Users', async (req, res) => {
     try {
         const newUser = await User.create(req.body)
         res.status(200).json({

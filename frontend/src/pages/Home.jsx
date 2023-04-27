@@ -1,7 +1,9 @@
+
 import Nav from "../components/nav"
 import { Link } from 'react-router-dom'
 
 function Home() {
+
   return (
     <div>
         <Nav/>
