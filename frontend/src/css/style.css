@@ -23,10 +23,11 @@
   border-radius: 10px;
   border: none;
   margin: 10px;
-  margin-left: 1150px;
+  width: 70px;
+  text-align: center;
+  margin-left: auto;
   object-fit: cover;
   object-position: bottom;
-  text-align: right;
 }
 .nav__login:hover {
   color: #1B98FC;
@@ -50,6 +51,7 @@
   padding: 10px 20px;
   border-radius: 10px;
   border: none;
+  width: 80px;
   margin: 10px;
   margin-left: auto;
   margin-right: auto;
