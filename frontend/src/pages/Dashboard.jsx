@@ -6,7 +6,7 @@ function Dashboard () {
 
     useEffect(() => {
       const fetchData = async() => {
-        const response = await fetch('/api')
+        const response = await fetch('http://localhost:4005/api')
         const JSON = await response.json()
         setUsers(JSON)
       }
