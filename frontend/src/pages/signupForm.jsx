@@ -18,7 +18,7 @@ function SignUpForm() {
 
 	async function handleSubmit(e) {
 		e.preventDefault()
-		navigate('/')
+		// navigate('/')
 		await fetch(`http://localhost:4005/api/Users`, {
 			method: 'POST',
 			headers: {
