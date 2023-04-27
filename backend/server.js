@@ -27,7 +27,7 @@ app.use(bodyParser.json())
 // Controllers & Routes
 
 // app.use('/api', require('./Controllers/User_controller'))
-const usersController = require('./controllers/User_controller')
+const usersController = require('./Controllers/User_controller.js')
 app.use('/api', usersController)
 
 
