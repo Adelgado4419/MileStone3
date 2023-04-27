@@ -23,7 +23,7 @@ function LoginForm() {
 
     return (
         <main>
-            <h1>Login</h1>
+            <h2>Login</h2>
             {errorMessage !== null
                 ? (
                     <div className="alert alert-danger" role="alert">

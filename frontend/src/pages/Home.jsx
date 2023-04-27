@@ -1,6 +1,6 @@
 
 import Nav from "../components/nav"
-import { Link } from 'react-router-dom'
+import backdropv4 from '../assets/backdropv4.png'
 
 function Home() {
 
@@ -10,9 +10,7 @@ function Home() {
         <p>
           Fantasy Tinder
         </p>
-      <Link to='/signup'>
-      <button id='SignUpButton' type='button'>sign up </button>
-      </Link>
+
     </div>
   );
 }
