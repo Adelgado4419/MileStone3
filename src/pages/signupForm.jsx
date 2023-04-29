@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { Link } from 'react-router-dom'
+const React = require('react')
 
 function SignUpForm() {
 
@@ -16,20 +17,33 @@ function SignUpForm() {
 		dateOfBirth: ''
 	})
 
-	async function handleSubmit(e) {
-		e.preventDefault()
-		navigate('/')
-		const response = await fetch(`api/Users`, {
+	const handleSubmit = async (e) => {
+        e.preventDefault()
+        navigate('/')
+		const response = await fetch('/api/Users', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify(user)
-		})
-		console.log(response)
-		return await response.json
+		});
+		return await response.json();
+    }
+	
+	// async function handleSubmit(e) {
+	// 	e.preventDefault()
+	// 	navigate('/')
+	// 	const response = await fetch(`api/Users`, {
+	// 		method: 'POST',
+	// 		headers: {
+	// 			'Content-Type': 'application/json'
+	// 		},
+	// 		body: JSON.stringify(user)
+	// 	})
+	// 	console.log(response)
+	// 	return await response.json
 
-	}
+	// }
 
 	return (
 		<main>
