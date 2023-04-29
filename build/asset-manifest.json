@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.26ba7dec.css",
+    "main.js": "/static/js/main.81b913f0.js",
+    "static/media/backdropv4.png": "/static/media/backdropv4.97fec1714eadef50b121.png",
+    "static/media/fanterlogo.png": "/static/media/fanterlogo.60cd96e76320d928d1f6.png",
+    "index.html": "/index.html",
+    "main.26ba7dec.css.map": "/static/css/main.26ba7dec.css.map",
+    "main.81b913f0.js.map": "/static/js/main.81b913f0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26ba7dec.css",
+    "static/js/main.81b913f0.js"
+  ]
+}

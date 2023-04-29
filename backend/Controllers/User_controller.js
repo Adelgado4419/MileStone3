@@ -13,6 +13,7 @@ users.get('/', async (req,res) => {
         console.log(err)
     }
 })
+
 // get a users by id
 users.get('/:id', async (req, res) => {
     try {
