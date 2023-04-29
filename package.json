@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "context": "^3.0.7"
+    "context": "^3.0.7",
+    "react-tinder-card": "^1.6.2"
   }
 }
