@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
 .nav__logo {
   display: flex;
   align-items: center;
@@ -25,10 +26,9 @@
   border: none;
   margin: 10px;
   width: 70px;
-  text-align: center;
-  margin-left: auto;
   object-fit: cover;
   object-position: bottom;
+  text-align: right;
 }
 .nav__login:hover {
   color: #1B98FC;
@@ -52,7 +52,6 @@
   padding: 10px 20px;
   border-radius: 10px;
   border: none;
-  width: 80px;
   margin: 10px;
   width: 80px;
   margin-left: auto;
@@ -101,6 +100,45 @@
   background-color: white;
 }
 
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard .swipe-container {
+  width: 70%;
+  display: flow-root;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.dashboard .swipe-container .swipe {
+  position: absolute;
+}
+.dashboard .card-container {
+  width: 400px;
+  height: 650px;
+}
+.dashboard .card-container .card {
+  position: relative;
+  background-color: #fff;
+  width: 400px;
+  height: 650px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+}
+.dashboard .card-container .card h3 {
+  margin-top: 0;
+  text-align: center;
+  color: rgb(70, 116, 128);
+}
+.dashboard .swipe-info {
+  position: absolute;
+  bottom: 0;
+  padding: 160px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -109,7 +147,7 @@
 }
 
 body {
-  background-color: #8b7070;
+  background-color: #000000;
   color: #B8E2ED;
 }
 
@@ -150,12 +188,11 @@ h2 {
     width: auto;
   }
 }
-.dashboard{
+.backdrop .dashboard {
   display: flex;
   justify-content: space-between;
 }
-
-.dashboard .swipe-container{
+.backdrop .dashboard .swipe-container {
   width: 70%;
   display: flow-root;
   flex-direction: column;
@@ -163,20 +200,14 @@ h2 {
   align-items: center;
   height: 100vh;
 }
-
-
-
-.swipe {
+.backdrop .dashboard .swipe-container .swipe {
   position: absolute;
-  
 }
-
-.dashboard .card-container {
+.backdrop .dashboard .card-container {
   width: 400px;
   height: 650px;
 }
-
-.card {
+.backdrop .dashboard .card-container .card {
   position: relative;
   background-color: #fff;
   width: 400px;
@@ -184,20 +215,24 @@ h2 {
   border-radius: 20px;
   background-size: cover;
   background-position: center;
- 
 }
-
-
-
-.card h3 {
+.backdrop .dashboard .card-container .card h3 {
   margin-top: 0;
-  text-align:  center;
+  text-align: center;
   color: rgb(70, 116, 128);
 }
-
-.dashboard .swipe-info{
+.backdrop .dashboard .swipe-info {
   position: absolute;
   bottom: 0;
   padding: 160px;
 }
+@media screen and (max-width: 768px) {
+  .backdrop .dashboard {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    font-size: 2rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

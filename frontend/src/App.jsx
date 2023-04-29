@@ -5,6 +5,8 @@ import SignUpForm from './pages/signupForm'
 import LoginForm from './pages/loginForm'
 import CurrentUserProvider from './contexts/CurrentUser'
 
+
+
 const App = () => {
     return (
         <CurrentUserProvider>

@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "context": "^3.0.7"
+    "@react-spring/web": "^9.7.2",
+    "context": "^3.0.7",
+    "react-tinder-card": "^1.6.2"
   }
 }
