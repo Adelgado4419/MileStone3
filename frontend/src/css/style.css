@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
 .nav__logo {
   display: flex;
   align-items: center;
@@ -70,6 +71,52 @@
   }
 }
 
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+.main__back {
+  display: flex;
+  color: #1B98FC;
+  background-color: #B8E2ED;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+  margin-left: 1150px;
+  object-fit: cover;
+  object-position: bottom;
+  text-align: right;
+}
+.main__back:hover {
+  color: #1B98FC;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+.main__back:hover__submit {
+  display: flex;
+  color: #1B98FC;
+  background-color: #B8E2ED;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+  margin-left: 1150px;
+  object-fit: cover;
+  object-position: bottom;
+  text-align: right;
+}
+.main__back:hover__submit:hover {
+  color: #1B98FC;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -88,6 +135,17 @@ h1 {
 }
 @media screen and (max-width: 280px) {
   h1 {
+    font-size: 1.5rem;
+  }
+}
+
+h2 {
+  text-align: center;
+  color: #B8E2ED;
+  margin: 0 0 2rem;
+}
+@media screen and (max-width: 280px) {
+  h2 {
     font-size: 1.5rem;
   }
 }

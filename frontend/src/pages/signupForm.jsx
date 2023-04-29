@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function SignUpForm() {
 
 	const navigate = useNavigate()
-	
+
 	const [user, setUser] = useState({
 		first_name: '',
 		last_name: '',
@@ -28,19 +28,24 @@ function SignUpForm() {
 		})
 		console.log(response)
 		return await response.json
-		
+
 	}
 
 	return (
 		<main>
-			<h1>Sign Up</h1>
-			<Link to='/'>			
-			<button id='ReturnButton' type='button'>Go Back</button>
+
+			<Link to='/' style={{textDecoration:'none'}}>
+				<button
+					className="main__back" >
+					Go Back
+				</button>
 			</Link>
+
+			<h2>Sign Up</h2>
 			<form onSubmit={handleSubmit}>
 				<div className="row">
 					<div className="col-sm-6 form-group">
-						<label htmlFor="firstName">First Name</label>
+						<label htmlFor="firstName" style={{ display: "block", marginBottom: "5px" }}>First Name</label>
 						<input
 							required
 							aria-errormessage="first name should be at least 4 characters long"
@@ -50,10 +55,11 @@ function SignUpForm() {
 							className="form-control"
 							id="firstName"
 							name="firstName"
+							style={{ marginBottom: "10px" }}
 						/>
 					</div>
 					<div className="col-sm-6 form-group">
-						<label htmlFor="lastName">Last Name</label>
+						<label htmlFor="lastName" style={{ display: "block", marginBottom: "5px" }}>Last Name</label>
 						<input
 							placeholder="Last Name"
 							required
@@ -62,12 +68,13 @@ function SignUpForm() {
 							className="form-control"
 							id="lastName"
 							name="lastName"
+							style={{ marginBottom: "10px" }}
 						/>
 					</div>
 				</div>
 				<div className="row">
 					<div className="col-sm-6 form-group">
-						<label htmlFor="email">Email</label>
+						<label htmlFor="email" style={{ display: "block", marginBottom: "5px" }}>Email</label>
 						<input
 							placeholder="Email"
 							type="email"
@@ -77,12 +84,13 @@ function SignUpForm() {
 							className="form-control"
 							id="email"
 							name="email"
+							style={{ marginBottom: "10px" }}
 						/>
 					</div>
 				</div>
 				<div className="row">
 					<div className="col-sm-6 form-group">
-						<label htmlFor="username">UserName</label>
+						<label htmlFor="username" style={{ display: "block", marginBottom: "5px" }}>User Name</label>
 						<input
 							placeholder="Username"
 							pattern="^[A-Za-z0-9]{3,16}$"
@@ -92,12 +100,13 @@ function SignUpForm() {
 							className="form-control"
 							id="username"
 							name="username"
+							style={{ marginBottom: "10px" }}
 						/>
 					</div>
 				</div>
 				<div className="row">
 					<div className="col-sm-6 form-group">
-						<label htmlFor="password">password</label>
+						<label htmlFor="password" style={{ display: "block", marginBottom: "5px" }}>Password</label>
 						<input
 							type="password"
 							placeholder="password"
@@ -108,13 +117,14 @@ function SignUpForm() {
 							className="form-control"
 							id="password"
 							name="password"
+							style={{ marginBottom: "10px" }}
 						/>
 					</div>
 				</div>
 				<div className="row">
 					<div className="col-sm-6 form-group">
-						<label htmlFor="gender">gender</label>
-						<select 
+						<label htmlFor="gender" style={{ display: "block", marginBottom: "5px" }} >Gender</label>
+						<select
 							placeholder="Gender"
 							required
 							value={user.gender}
@@ -122,17 +132,19 @@ function SignUpForm() {
 							className="form-control"
 							id="gender"
 							name="gender"
-							>
+							style={{ marginBottom: "10px" }}
+						>
 							<option value='man'>man</option>
 							<option value='woman'>woman</option>
 							<option value='non/binary'>non/binary</option>
 							<option value='none'>prefer not to say</option>
-							</select>
+						</select>
+
 					</div>
 				</div>
 				<div className="row">
 					<div className="col-sm-6 form-group">
-						<label htmlFor="dateOfBirth">date of birth</label>
+						<label htmlFor="dateOfBirth" style={{ display: "block", marginBottom: "5px" }}>Date of Birth</label>
 						<input
 							type="date"
 							required
@@ -141,11 +153,14 @@ function SignUpForm() {
 							className="form-control"
 							id="dateOfBirth"
 							name="dateOfBirth"
+							style={{ marginBottom: "10px" }}
 						/>
 					</div>
 				</div>
-			
-				<input className="btn btn-primary" type="submit" value="Sign Up" />
+				<button
+					className="main__submit">
+					Sign Up
+				</button>
 			</form>
 		</main>
 	)
