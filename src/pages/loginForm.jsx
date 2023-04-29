@@ -16,7 +16,7 @@ function LoginForm() {
 
     async function handleSubmit(e) {
         e.preventDefault()
-        const response = await fetch(`http://localhost:4005/auth`, {
+        const response = await fetch(`/auth`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
