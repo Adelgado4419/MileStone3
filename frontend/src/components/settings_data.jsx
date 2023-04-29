@@ -1,23 +1,25 @@
-import * as Ficons from'react-icons/fi'
-import * as Aicons from 'react-icons/ai'
+// import * as Ficons from'react-icons/fi'
+// import * as Aicons from 'react-icons/ai'
 
-export const sidebarData = [
-    {
-        title: 'Profile settings',
-        path: '/Edit',
-        icon: <Aicons.AiOutlineEdit />,
-        CName: 'settings-text'
-    },
-    {
-        title: 'Security settings',
-        path: '/Edit/Security',
-        icon: <Aicons.AiOutlineSecurityScan />,
-        CName: 'settings-text'
-    },
-    {
-        title: 'Logout',
-        path: '/',
-        icon: <Aicons.AiOutlineHome />,
-        CName: 'settings-text'
-    },
-]
+
+// export const sidebarData = [
+//     {
+//         title: ,
+//         path: ,
+//         icon: ,
+//         CName: 
+//     },
+//     {
+//         title: ,
+//         path: ,
+//         icon: ,
+//         CName: 'settings-text'
+//     },
+//     {
+//         title: ,
+//         path: '/',
+//         icon: ,
+//         CName: 'settings-text'
+//     },
+// ]
+
