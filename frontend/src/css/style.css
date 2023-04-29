@@ -24,7 +24,7 @@
   border-radius: 10px;
   border: none;
   margin: 10px;
-  margin-left: 1150px;
+  width: 70px;
   object-fit: cover;
   object-position: bottom;
   text-align: right;
@@ -52,6 +52,7 @@
   border-radius: 10px;
   border: none;
   margin: 10px;
+  width: 80px;
   margin-left: auto;
   margin-right: auto;
   object-fit: cover;
@@ -93,25 +94,6 @@
   text-align: right;
 }
 .main__back:hover {
-  color: #1B98FC;
-  transition: all 0.3s ease;
-  background-color: white;
-}
-.main__back:hover__submit {
-  display: flex;
-  color: #1B98FC;
-  background-color: #B8E2ED;
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: none;
-  margin: 10px;
-  margin-left: 1150px;
-  object-fit: cover;
-  object-position: bottom;
-  text-align: right;
-}
-.main__back:hover__submit:hover {
   color: #1B98FC;
   transition: all 0.3s ease;
   background-color: white;
