@@ -60,7 +60,7 @@ users.put('/:id', async (req, res) => {
 // DELETE users BY ID
 users.delete('/:id', async (req, res) => {
     try {
-        const deletedUser = await User.destroy({
+        const deletedUser = await User.destroy(req.body, {
             where: { id: req.params.id }
         })
         res.status(200).json({

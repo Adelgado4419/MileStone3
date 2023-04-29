@@ -37,13 +37,13 @@ function Settings(){
                         <li key={2} className={'settings-text'}>
                             <Link to={`/Edit/Security/${currentUser.id}`}>
                             <Aicons.AiOutlineSecurityScan />
-                            <span>'Security settings'</span>
+                            <span>Security settings</span>
                             </Link>
                         </li>
                         <li key={3} className={'settings-text'}>
                             <Link to={`/`}>
                             <Aicons.AiOutlineHome />
-                            <span>'Logout'</span>
+                            <span>Logout</span>
                             </Link>
                         </li>
             </ul>
