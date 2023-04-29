@@ -115,5 +115,10 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    
+    margin-top: 600px;
+}
+
+
+.chat{
+    stroke: aquamarine;
 }
