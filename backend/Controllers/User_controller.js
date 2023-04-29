@@ -14,6 +14,7 @@ users.get('/', async (req,res) => {
     }
 })
 
+
 // get a users by id
 users.get('/:id', async (req, res) => {
     try {
