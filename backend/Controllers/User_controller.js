@@ -35,8 +35,10 @@ users.post('/Users', async (req, res) => {
         const user = await User.create({
             ...rest,
             passwordDigest: await bcrypt.hash(password, 10)
+            
         })
         res.json(user)
+        console.log(user)
 
     } catch (err){
         res.status(500).send('server error')
