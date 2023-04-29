@@ -23,7 +23,8 @@
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
     "sequelize": "^6.31.0",
-    "sequelize-cli": "^6.6.0"
+    "sequelize-cli": "^6.6.0",
+    "serve": "^14.2.0"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.3"
