@@ -1,10 +1,9 @@
 import { useContext, useState } from "react"
-import { useHistory } from "react-router"
-
+import { useNavigate } from "react-router-dom"
+import { CurrentUser } from "../contexts/CurrentUser"
 
 function LoginForm() {
-
-    const history = useHistory()
+    const navigate = useNavigate()
 
     const { setCurrentUser } = useContext(CurrentUser)
 
@@ -17,13 +16,27 @@ function LoginForm() {
 
     async function handleSubmit(e) {
         e.preventDefault()
-    
+        const response = await fetch(`http://localhost:4005/auth`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(credentials)
+        })
 
+        const data = await response.json()
+
+        if (response.status === 200) {
+            setCurrentUser(data.user)
+            navigate(`/dashboard/${data.user.username}`)
+        } else {
+            setErrorMessage(data.message)
+        }
     }
 
     return (
         <main>
-            <h2>Login</h2>
+            <h1>Login</h1>
             {errorMessage !== null
                 ? (
                     <div className="alert alert-danger" role="alert">

@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom'
 import Nav from "../components/nav"
 import backdropv4 from '../images/canvaPhotos/backdropv4.png'
 
@@ -10,7 +10,7 @@ function Home() {
         <h1>
           "Fantasy Tinder"
         </h1>
-
+        
         <img className="backdrop" src={backdropv4} alt="backdrop"/>
 
     </div>

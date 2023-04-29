@@ -1,33 +1,23 @@
 import fanterlogo from "../images/fanterlogo.png";
-
+import { Link } from 'react-router-dom'
 const Nav = () => {
-    const handleClick = () => {
-    };
 
     return (
-        <nav>
-            <button
-                className="nav__login"
-                onClick={handleClick} >
-                Log In
-            </button>
-            <div className="logo-container">
-                <img className="nav__logo" src={fanterlogo} alt="logo"
-                />
+        <div>
+            <div >
+                <Link to='/login' className="nav__login">
+                <h5>log in</h5>
+                </Link>
             </div>
-
-            <div></div>
-
-            <button
-                className="nav__signup"
-                onClick={handleClick}
-            >
-                Sign Up
-            </button>
-
-
-
-        </nav>
+        <div className="logo-container">
+        <img className="nav__logo" src={fanterlogo} alt="logo"/>
+        </div>
+            <div >
+                <Link to='/signup' className="nav__signup">
+                <h5>sign up</h5>
+                </Link>
+            </div>
+        </div>
     );
 };
 export default Nav;
