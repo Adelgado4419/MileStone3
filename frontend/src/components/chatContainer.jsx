@@ -1,10 +1,10 @@
-
+import ChatHead from './chatHead'
 const chatContainer = () => {
 
 
     return (
         <div className="chat-container">
-            <chatHead/>
+            <ChatHead/>
             
             <div>
                 <button className="option">Matches</button>
