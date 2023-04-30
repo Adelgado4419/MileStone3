@@ -46,6 +46,11 @@
             transition: all 0.3s ease;
             background-color: white;
 
+            @include mobile {
+                height: auto;
+                width: auto;
+            }
+
         }
     }
 
@@ -65,10 +70,16 @@
         flex-direction: column;
         @extend %align-center;
 
+          @include mobile {
+            height: auto;
+            width: auto;
+        }
+
     }
 
     &__row{
        align-self: center;
+       
     }
 
     .btn {

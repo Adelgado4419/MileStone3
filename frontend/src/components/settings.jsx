@@ -11,9 +11,9 @@ function Settings(){
     
     const showSidebar = () => setSidebar(!Sidebar)
     return(
-        <div>
+        <div className="menu">
             <IconContext.Provider value={{color: '#fff'}}>
-            <Link to='#' className='menu-bars'>
+            <Link to='#' className='menu__bars'>
             <Ficons.FiSettings onClick={showSidebar}/>
             </Link>
      

@@ -2,6 +2,8 @@
 @import "config";
 @import "media-queries";
 
+
+
 .dashboard {
     display: flex;
     justify-content: space-between;
@@ -39,6 +41,11 @@
           text-align:  center;
           color: rgb(70, 116, 128);
         }
+
+        @include mobile {
+          height: auto;
+          width: auto;
+      }
       }
   
       .swipe-info {
@@ -46,6 +53,8 @@
         bottom: 0;
         padding: 160px;
       }
+
+     
     }
   }
   
@@ -77,6 +86,11 @@
       &:disabled {
         border-bottom: solid 4px rgb(187, 187, 187);
       }
+
+      @include mobile {
+        height: auto;
+        width: auto;
+    }
     }
   
     .match-chat-container {
@@ -89,6 +103,11 @@
       align-items: center;
       padding: 20px;
       color: rgb(255, 255, 255);
+
+      @include mobile {
+        height: auto;
+        width: auto;
+    }
     }
   
     .pfp-container {
@@ -100,7 +119,13 @@
   
       img {
         width: 100%;
+
       }
+
+      @include mobile {
+        height: auto;
+        width: auto;
+    }
     }
   
     // Chat Display
@@ -109,6 +134,11 @@
       padding: 20px;
       height: 60vh;
       overflow-y: auto;
+
+      @include mobile {
+        height: auto;
+        width: auto;
+    }
     }
   
     // Chat Input
@@ -117,6 +147,12 @@
       display: flex;
       flex-direction: column;
       margin-top: 600px;
+      
+      @include mobile {
+        height: auto;
+        width: auto;
+    }
+
     }
   
     .chat {
