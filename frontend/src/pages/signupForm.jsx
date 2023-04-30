@@ -41,7 +41,6 @@ function SignUpForm() {
 				</button>
 			</Link>
 
-			<h2>Sign Up</h2>
 			<form onSubmit={handleSubmit}>
 				<div className="row">
 					<div className="col-sm-6 form-group">
