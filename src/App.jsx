@@ -11,15 +11,21 @@ import SecuritySettings from './pages/Security_settings'
 const App = () => {
     const [currentUser, setCurrentUser] = useState(null)
     
-    // useEffect(() => {
-
-    //     const getLoggedInUser = async () => {
-    //         let response = await fetch('http://localhost:4005/auth/profile')
-    //         let user = await response.json()
-    //         setCurrentUser(user)
-    //     }
-    //     getLoggedInUser()
-    // }, [])
+    useEffect(() => {
+        const getLoggedInUser = async () => {
+        const token = localStorage.getItem('token')
+        if (token) {
+            const response = await fetch('http://localhost:4005/auth/profile', {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+            })
+            const user = await response.json()
+            setCurrentUser(user)
+        }
+        }
+        getLoggedInUser()
+      }, [])
 
     return (
         <UserContext.Provider value={{ currentUser, setCurrentUser }}>
