@@ -7,7 +7,7 @@ const { sequelize } = require('sequelize')
 const path = require('path')
 const cookieSession = require('cookie-session')
 const bodyParser = require('body-parser')
-
+const defineCurrentUser = require('./middleware/defineCurrentUser')
 
 // Express Settings
 require('dotenv').config()
@@ -29,7 +29,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, '../build')))
 app.use(bodyParser.json())
-
+app.use(defineCurrentUser)
 
 
 // Controllers & Routes
