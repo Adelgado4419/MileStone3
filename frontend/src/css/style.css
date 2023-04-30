@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
-.main__form, .main__login, .nav__logo {
+.main__login, .main__form, .nav__logo {
   display: flex;
   align-items: center;
 }
@@ -74,67 +74,86 @@
   }
 }
 
-.main__form, .main__login, .nav__logo {
+.navbar {
+  background-color: #aaaaaa;
+  width: 50px;
+  height: 80px;
   display: flex;
+  justify-content: start;
   align-items: center;
-  justify-content: center;
+}
+.navbar .menu-bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+  width: 50px;
+}
+.navbar .settingsBar {
+  width: 20%;
 }
 
-.bg {
-  background-image: url("../assets/backdropv5.png");
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%;
+.settings-menu {
+  background-color: #aaaaaa;
+  width: 50px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+.settings-menu-active {
+  display: flex;
+  left: 0;
+  transition: 350ms;
+  width: 50px;
+}
+.settings-menu .settings-menu-items {
   width: 100%;
 }
-@media screen and (max-width: 280px) {
-  .bg {
-    height: auto;
-    width: auto;
-  }
-}
-
-.main__login {
-  background: #55acf3;
-  padding: 1.5em;
-  border-radius: 1em;
-  width: 30%;
-  margin: auto;
-  width: 500px;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-  position: relative;
-  border-radius: 10px;
-  grid-template-columns: 1fr 1fr;
-}
-
-.btn {
+.settings-menu .settings-bar-toggle {
+  background-color: #060b26;
+  width: 100%;
+  height: 80px;
   display: flex;
-  color: #1B98FC;
-  background-color: #B8E2ED;
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: none;
-  margin: 10px;
-  margin-left: 40px;
-  object-fit: cover;
-  object-position: bottom;
-  text-align: right;
+  justify-content: start;
+  align-items: center;
 }
-.btn:hover {
-  color: #1B98FC;
-  transition: all 0.3s ease;
-  background-color: white;
+.settings-menu .settings-bar-toggle span {
+  margin-left: 16px;
 }
-@media screen and (max-width: 280px) {
-  .btn {
-    height: auto;
-    width: auto;
-  }
+.settings-menu .settings-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+  width: 100%;
+}
+.settings-menu .settings-text a {
+  background-color: #060b26;
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+.settings-menu .settings-text a:hover {
+  background-color: #1a83ff;
 }
 
-.main__form, .nav__logo, .main__login {
+.fanterlogo {
+  width: 40px;
+  height: 40px;
+}
+
+.main__login, .main__form, .nav__logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,10 +162,10 @@
 .sign_up {
   background-image: url("../assets/backdropv5.png");
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%;
+  height: 100vh;
   width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 @media screen and (max-width: 280px) {
   .sign_up {
@@ -183,8 +202,8 @@
   padding: 1.5em;
   border-radius: 1em;
   margin: auto;
-  width: 500px;
-  height: 600px;
+  width: 30%;
+  height: 100%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   border-radius: 10px;
@@ -219,6 +238,170 @@
     height: auto;
     width: auto;
   }
+}
+
+.main__login, .nav__logo, .main__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg {
+  background-image: url("../assets/backdropv5.png");
+  display: block;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 280px) {
+  .bg {
+    height: auto;
+    width: auto;
+  }
+}
+
+.main__login {
+  background: #55acf3;
+  padding: 1.5em;
+  border-radius: 1em;
+  width: 30%;
+  margin: auto;
+  margin-top: 10%;
+  width: 500px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.btn {
+  display: flex;
+  color: #1B98FC;
+  background-color: #B8E2ED;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+  margin-left: 40px;
+  object-fit: cover;
+  object-position: bottom;
+  text-align: right;
+}
+.btn:hover {
+  color: #1B98FC;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+@media screen and (max-width: 280px) {
+  .btn {
+    height: auto;
+    width: auto;
+  }
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard .swipe-container {
+  width: 70%;
+  display: flow-root;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.dashboard .swipe-container .swipe {
+  position: absolute;
+}
+.dashboard .card-container {
+  width: 400px;
+  height: 650px;
+}
+.dashboard .card-container .card {
+  position: relative;
+  left: 40px;
+  top: 40px;
+  background-color: #fff;
+  width: 400px;
+  height: 650px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+}
+.dashboard .card-container .card h3 {
+  margin-top: 0;
+  text-align: center;
+  color: rgb(70, 116, 128);
+}
+.dashboard .card-container .swipe-info {
+  position: absolute;
+  bottom: 0;
+  padding: 160px;
+}
+
+.chat-container {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  width: 30%;
+  text-align: left;
+  z-index: 0;
+  margin: 10px;
+}
+.chat-container .chat-container-head {
+  background: linear-gradient(45deg, #1B98FC, #B8E2ED);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-container .option {
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-bottom: solid 4px #1B98FC;
+  font-size: 20px;
+  margin: 2px;
+  padding: 10px;
+}
+.chat-container .option:disabled {
+  border-bottom: solid 4px rgb(187, 187, 187);
+}
+.chat-container .match-chat-container {
+  margin-top: 20px;
+}
+.chat-container .profile,
+.chat-container .log-out {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+}
+.chat-container .pfp-container {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px;
+}
+.chat-container .pfp-container img {
+  width: 100%;
+}
+.chat-container .chat-display,
+.chat-container .matches-display {
+  padding: 20px;
+  height: 60vh;
+  overflow-y: auto;
+}
+.chat-container .chat-input {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 600px;
+}
+.chat-container .chat {
+  stroke: aquamarine;
 }
 
 * {
@@ -268,52 +451,6 @@ h2 {
   .backdrop {
     height: auto;
     width: auto;
-  }
-}
-.backdrop .dashboard {
-  display: flex;
-  justify-content: space-between;
-}
-.backdrop .dashboard .swipe-container {
-  width: 70%;
-  display: flow-root;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.backdrop .dashboard .swipe-container .swipe {
-  position: absolute;
-}
-.backdrop .dashboard .card-container {
-  width: 400px;
-  height: 650px;
-}
-.backdrop .dashboard .card-container .card {
-  position: relative;
-  background-color: #fff;
-  width: 400px;
-  height: 650px;
-  border-radius: 20px;
-  background-size: cover;
-  background-position: center;
-}
-.backdrop .dashboard .card-container .card h3 {
-  margin-top: 0;
-  text-align: center;
-  color: rgb(70, 116, 128);
-}
-.backdrop .dashboard .swipe-info {
-  position: absolute;
-  bottom: 0;
-  padding: 160px;
-}
-@media screen and (max-width: 768px) {
-  .backdrop .dashboard {
-    position: absolute;
-    top: 22px;
-    right: 20px;
-    font-size: 2rem;
   }
 }
 

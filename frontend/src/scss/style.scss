@@ -1,9 +1,5 @@
-@import "config";
-@import "nav";
-@import "login-form";
-@import "signup-form";
-@import "dashboard";
-@import "media-queries";
+@import "config", "nav", "settings", "signup-form", "login-form", "dashboard", "media-queries";
+
 
 * {
   box-sizing: border-box;
@@ -51,58 +47,4 @@ h2 {
         height: auto;
         width: auto;
     }
-
-    .dashboard {
-      display: flex;
-      justify-content: space-between;
-    
-      .swipe-container {
-        width: 70%;
-        display: flow-root;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    
-        .swipe {
-          position: absolute;
-        }
-      }
-    
-      .card-container {
-        width: 400px;
-        height: 650px;
-    
-        .card {
-          position: relative;
-          background-color: #fff;
-          width: 400px;
-          height: 650px;
-          border-radius: 20px;
-          background-size: cover;
-          background-position: center;
-    
-          h3 {
-            margin-top: 0;
-            text-align: center;
-            color: rgb(70, 116, 128);
-          }
-        }
-      }
-    
-      .swipe-info {
-        position: absolute;
-        bottom: 0;
-        padding: 160px;
-      }
-  
-      @include tablet {
-          position: absolute;
-          top: 22px;
-          right: 20px;
-          font-size: 2rem;
-          }
-      }
-    
-
-}
+  }

@@ -41,8 +41,6 @@ function SignUpForm() {
 					Go Back
 				</button>
 			</Link>
-
-			<h2>Sign Up</h2>
 			<form className="main__form" onSubmit={handleSubmit}>
 				<div className="main__row">
 					<div className="col-sm-6 form-group">
