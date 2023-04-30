@@ -2,7 +2,7 @@ import TinderCard from "react-tinder-card"
 import { useState } from "react"
 import ChatContainer from '../components/chatContainer'
 import Settings from "../components/settings"
-import fanterlogo from "../images/fanterlogo.png";
+
 import '../css/settings.css'
 
 const Dashboard = () =>{
@@ -46,7 +46,7 @@ const Dashboard = () =>{
   return (
     
     <div className="dashboard">
-       <img className="fanterlogo" src={fanterlogo} alt="top-left-icon"/>
+    
       <div className="settingsBar">
                 <Settings></Settings>
       </div>

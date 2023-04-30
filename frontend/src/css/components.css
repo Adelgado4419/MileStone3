@@ -26,6 +26,8 @@
   
   .card {
     position: relative;
+    left: 40px;
+    top: 40px;
     background-color: #fff;
     width: 400px;
     height: 650px;
@@ -34,8 +36,6 @@
     background-position: center;
    
   }
-  
-  
   
   .card h3 {
     margin-top: 0;
@@ -55,12 +55,12 @@
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     width: 30%;
     text-align: left;
-    z-index: 1;
+    z-index: 0;
     margin: 10px;
 }
 
 .chat-container .chat-container-head {
-    background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+    background: linear-gradient(45deg, #1B98FC, #B8E2ED);
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -70,7 +70,7 @@
 .chat-container  .option{
     border: none;
     background-color: rgb(255, 255, 255);
-    border-bottom: solid 4px rgb(243, 33, 33);
+    border-bottom: solid 4px #1B98FC;
     font-size: 20px;
     margin: 2px;
     padding: 10px;

@@ -5,7 +5,7 @@ import { useState, useContext  } from 'react'
 import '../css/settings.css'
 import { IconContext } from 'react-icons'
 import { UserContext } from '../contexts/CurrentUser'
-
+import fanterlogo from "../images/fanterlogo.png";
 
 
 function Settings(){
@@ -16,6 +16,7 @@ function Settings(){
     const showSidebar = () => setSidebar(!Sidebar)
     return(
         <div>
+            <img className="fanterlogo" src={fanterlogo} alt="top-left-icon"/>
             <IconContext.Provider value={{color: '#fff'}}>
             <Link to='#' className='menu-bars'>
             <Ficons.FiSettings onClick={showSidebar}/>
@@ -23,11 +24,11 @@ function Settings(){
      
         <div className={Sidebar ? 'setting-menu-active' : 'settings-menu'}>
             <ul className='settings-menu-items'>
-                <li className='settings-bar-toggle'>
-                    <Link to='#' className='menu-bars'>
-                        <Aicons.AiOutlineCloseCircle onClick={showSidebar} />
-                    </Link>
-                </li>
+                        <li className='settings-bar-toggle'>
+                            <Link to='#' className='menu-bars'>
+                            <Aicons.AiOutlineCloseCircle onClick={showSidebar} />
+                            </Link>
+                        </li>
                         <li key={1} className={'settings-text'}>
                             <Link to={`/Edit/${currentUser.id}`}>
                             <Aicons.AiOutlineEdit />
