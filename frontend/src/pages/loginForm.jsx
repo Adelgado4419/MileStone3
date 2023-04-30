@@ -46,7 +46,7 @@ function LoginForm() {
                 )
                 : null
             }
-            <form className="login" onSubmit={handleSubmit}>
+            <form className="main__login" onSubmit={handleSubmit}>
                 <div className="row">
                     <div className="col-sm-6 form-group">
                         <label htmlFor="email"  style={{ display: "block", marginBottom: "5px" }} >Email</label>

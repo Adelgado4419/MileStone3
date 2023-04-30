@@ -8,9 +8,6 @@ function Home() {
     <div>
       
         <Nav/>
-        <h1>
-          "Fantasy Tinder"
-        </h1>
         
         <img className="backdrop" src={backdropv5} alt="backdrop"/>
 

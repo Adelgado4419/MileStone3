@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
-.main__form, form, .nav__logo {
+.main__form, .main__login, .nav__logo {
   display: flex;
   align-items: center;
 }
@@ -74,7 +74,7 @@
   }
 }
 
-.main__form, form, .nav__logo {
+.main__form, .main__login, .nav__logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,13 +95,13 @@
   }
 }
 
-form {
+.main__login {
   background: #55acf3;
   padding: 1.5em;
   border-radius: 1em;
   width: 30%;
   margin: auto;
-  width: auto;
+  width: 500px;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   border-radius: 10px;
@@ -134,7 +134,7 @@ form {
   }
 }
 
-.main__form, .nav__logo, form {
+.main__form, .nav__logo, .main__login {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -219,45 +219,6 @@ form {
     height: auto;
     width: auto;
   }
-}
-
-.dashboard {
-  display: flex;
-  justify-content: space-between;
-}
-.dashboard .swipe-container {
-  width: 70%;
-  display: flow-root;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.dashboard .swipe-container .swipe {
-  position: absolute;
-}
-.dashboard .card-container {
-  width: 400px;
-  height: 650px;
-}
-.dashboard .card-container .card {
-  position: relative;
-  background-color: #fff;
-  width: 400px;
-  height: 650px;
-  border-radius: 20px;
-  background-size: cover;
-  background-position: center;
-}
-.dashboard .card-container .card h3 {
-  margin-top: 0;
-  text-align: center;
-  color: rgb(70, 116, 128);
-}
-.dashboard .swipe-info {
-  position: absolute;
-  bottom: 0;
-  padding: 160px;
 }
 
 * {
