@@ -27,20 +27,16 @@ function SecuritySettings() {
     const handleSubmit = async(e) => {
         e.preventDefault()
         navigate(`/dashboard/${currentUser.username}`)
-            try{
-                const response = await fetch(`http://localhost:4005/api/${id}`, {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(user)
-                });
-                return await response.json();
-            } catch (error) {
-                console.error(error)
-            }
+        const response = await fetch(`http://localhost:4005/auth/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        });
+        return await response.json();
+        
     }
-
 
 	return (
 		<main>

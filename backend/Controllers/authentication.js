@@ -31,4 +31,20 @@ auth.get('/profile', async (req, res) => {
 })
 
 
+// CREATE NEW users
+auth.put('/:id', async (req, res) => {
+    try{
+        let { password, ...rest } = req.body;
+        const user = await User.update({
+            ...rest,
+            passwordDigest: await bcrypt.hash(password, 10)
+        })
+        res.json(user)
+
+    } catch (err){
+        res.status(500).send('server error')
+        console.log(err)
+    }
+})
+
 module.exports = auth
