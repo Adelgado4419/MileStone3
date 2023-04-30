@@ -2,13 +2,29 @@
 @import "media-queries";
 
 
+%align-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign_up {
+        background-image: url('../assets/backdropv5.png');
+        display: block;
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+
+        @include mobile {
+            height: auto;
+            width: auto;
+        }
+    }
 
 .main {
     width: 100%;
     height: 100vh;
-    display: flex;
-    align-items: left;
-    justify-content: left;
 
     &__back {
         display: flex;
@@ -22,6 +38,51 @@
         margin-left: 1150px;
         object-fit: cover;
         object-position: bottom;
+        text-align: center;
+
+
+        &:hover {
+            color: $tertiary-color;
+            transition: all 0.3s ease;
+            background-color: white;
+
+        }
+    }
+
+
+    &__form {
+        background:  #55acf3;
+        padding: 1.5em;
+        border-radius: 1em;
+        margin: auto;
+        width: 30%;
+        height: 100%;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+        position: relative;
+        border-radius: 10px;
+        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: column;
+        @extend %align-center;
+
+    }
+
+    &__row{
+       align-self: center;
+    }
+
+    .btn {
+        display: flex;
+        color: $tertiary-color;
+        background-color: $secondary-color;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: none;
+        margin: 10px;
+        margin-left: 40px;
+        object-fit: cover;
+        object-position: bottom;
         text-align: right;
 
 
@@ -30,7 +91,11 @@
             transition: all 0.3s ease;
             background-color: white;
 
-
-                }
-            }
         }
+
+        @include mobile {
+            height: auto;
+            width: auto;
+        }
+    }
+}
