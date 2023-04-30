@@ -2,7 +2,7 @@ import TinderCard from "react-tinder-card"
 import { useState } from "react"
 import ChatContainer from '../components/chatContainer'
 import Settings from "../components/settings"
-
+import { supabase } from "../supabaseClient"
 import '../css/settings.css'
 
 const Dashboard = () =>{
@@ -43,6 +43,10 @@ const Dashboard = () =>{
     console.log(name + ' left the screen!')
   }
 
+  const addToMatches = async (matches) => {
+    
+    const{data, error} = await supabase.from("matches").insert({match_id: match.id, user_id: user.id})
+  }
   return (
     
     <div className="dashboard">
@@ -57,7 +61,11 @@ const Dashboard = () =>{
       
 
       {characters.map((character) =>
-          <TinderCard className='swipe' key={character.name} onSwipe={(dir) => swiped(dir, character.name)} onCardLeftScreen={() => outOfFrame(character.name)}>
+          <TinderCard className='swipe' 
+            key={character.name} 
+            onSwipe={(dir) => swiped(dir, character.name) ? addToMatches():null} 
+            onCardLeftScreen={() => outOfFrame(character.name)}>
+              
             <div style={{ backgroundImage: 'url(' + character.url + ')' }} className='card'>
               <h3>{character.name}</h3>
             </div>
