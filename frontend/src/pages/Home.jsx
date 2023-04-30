@@ -6,6 +6,7 @@ function Home() {
 
   return (
     <div>
+      
         <Nav/>
         <h1>
           "Fantasy Tinder"
@@ -18,3 +19,4 @@ function Home() {
 }
 
 export default Home;
+
