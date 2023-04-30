@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "context": "^3.0.7",
+    "react-tinder-card": "^1.6.2"
     "react-icons": "^4.8.0"
   }
 }

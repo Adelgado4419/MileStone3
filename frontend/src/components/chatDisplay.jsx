@@ -1,9 +1,16 @@
+import ChatInput from "./chatInput"
+import Chat from "./chat"
 
 const ChatDisplay = () => {
+
+
+    
     return (
-        <div className="chat-display"> 
-        
-        </div>
+        <>
+    <Chat/>
+
+    <ChatInput/>
+    </>
     )
 }
 

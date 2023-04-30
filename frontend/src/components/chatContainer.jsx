@@ -1,4 +1,7 @@
 import ChatHead from './chatHead'
+
+import ChatDisplay from './chatDisplay'
+
 const chatContainer = () => {
 
 
@@ -6,10 +9,12 @@ const chatContainer = () => {
         <div className="chat-container">
             <ChatHead/>
             
-            <div>
+            <div className='match-chat-container'>
                 <button className="option">Matches</button>
                 <button className="option">Chats</button>
             </div>
+            <matchDisplay/>
+            <ChatDisplay/>
         </div>
     )
 }
