@@ -16,7 +16,7 @@ function LoginForm() {
 
     async function handleSubmit(e) {
         e.preventDefault()
-        const response = await fetch(`/auth`, {
+        const response = await fetch(`http://localhost:4005/auth`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -28,6 +28,7 @@ function LoginForm() {
 
         if (response.status === 200) {
             setCurrentUser(data.user)
+            localStorage.setItem('token', data.token)
             navigate(`/dashboard/${data.user.username}`)
         } else {
             setErrorMessage(data.message)

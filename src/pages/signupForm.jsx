@@ -19,7 +19,7 @@ function SignUpForm() {
 	async function handleSubmit(e) {
 		e.preventDefault()
 		navigate('/')
-		const response = await fetch(`/api/Users`, {
+		const response = await fetch(`http://localhost:4005/api/Users`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
@@ -134,6 +134,7 @@ function SignUpForm() {
 							name="gender"
 							style={{ marginBottom: "10px" }}
 						>
+							<option	value='none' ></option>
 							<option value='man'>man</option>
 							<option value='woman'>woman</option>
 							<option value='non/binary'>non/binary</option>

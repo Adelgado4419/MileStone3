@@ -14,7 +14,11 @@ const App = () => {
     // useEffect(() => {
 
     //     const getLoggedInUser = async () => {
-    //         let response = await fetch('http://localhost:4005/auth/profile')
+    //         let response = await fetch('http://localhost:4005/auth/profile', {
+    //             headers: {
+    //                 'Authorization': ``
+    //             }
+    //         })
     //         let user = await response.json()
     //         setCurrentUser(user)
     //     }

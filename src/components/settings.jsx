@@ -1,7 +1,7 @@
 import * as Ficons from'react-icons/fi'
 import * as Aicons from 'react-icons/ai'
 import { Link } from 'react-router-dom'
-import { useState, useContext  } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import '../css/settings.css'
 import { IconContext } from 'react-icons'
 import { UserContext } from '../contexts/CurrentUser'
@@ -9,7 +9,7 @@ import fanterlogo from "../images/fanterlogo.png";
 
 
 function Settings(){
-    
+     
     const {currentUser, setCurrentUser} = useContext(UserContext)
 
     const [Sidebar, setSidebar] = useState(false)
