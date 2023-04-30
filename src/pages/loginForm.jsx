@@ -28,7 +28,8 @@ function LoginForm() {
 
         if (response.status === 200) {
             setCurrentUser(data.user)
-            navigate(`/dashboard/${data.user.username}`)
+            localStorage.setItem('token', data.token)
+            navigate(`/dashboard`)
         } else {
             setErrorMessage(data.message)
         }

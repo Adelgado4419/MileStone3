@@ -1,8 +1,8 @@
-const matchDisplay = () => {
+const MatchDisplay = () => {
     return (
         <div className="matches-container">
             matchDisplay
         </div>
     )
 }
-export default matchDisplay
+export default MatchDisplay
