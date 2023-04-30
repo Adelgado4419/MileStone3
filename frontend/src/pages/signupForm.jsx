@@ -32,6 +32,7 @@ function SignUpForm() {
 	}
 
 	return (
+	<div className="sign_up">
 		<main>
 
 			<Link to='/' style={{textDecoration:'none'}}>
@@ -42,8 +43,8 @@ function SignUpForm() {
 			</Link>
 
 			<h2>Sign Up</h2>
-			<form onSubmit={handleSubmit}>
-				<div className="row">
+			<form className="main__form" onSubmit={handleSubmit}>
+				<div className="main__row">
 					<div className="col-sm-6 form-group">
 						<label htmlFor="firstName" style={{ display: "block", marginBottom: "5px" }}>First Name</label>
 						<input
@@ -58,7 +59,7 @@ function SignUpForm() {
 							style={{ marginBottom: "10px" }}
 						/>
 					</div>
-					<div className="col-sm-6 form-group">
+					<div className="main__row">
 						<label htmlFor="lastName" style={{ display: "block", marginBottom: "5px" }}>Last Name</label>
 						<input
 							placeholder="Last Name"
@@ -72,7 +73,7 @@ function SignUpForm() {
 						/>
 					</div>
 				</div>
-				<div className="row">
+				<div className="main__row">
 					<div className="col-sm-6 form-group">
 						<label htmlFor="email" style={{ display: "block", marginBottom: "5px" }}>Email</label>
 						<input
@@ -88,7 +89,7 @@ function SignUpForm() {
 						/>
 					</div>
 				</div>
-				<div className="row">
+				<div className="main__row">
 					<div className="col-sm-6 form-group">
 						<label htmlFor="username" style={{ display: "block", marginBottom: "5px" }}>User Name</label>
 						<input
@@ -104,7 +105,7 @@ function SignUpForm() {
 						/>
 					</div>
 				</div>
-				<div className="row">
+				<div className="main__row">
 					<div className="col-sm-6 form-group">
 						<label htmlFor="password" style={{ display: "block", marginBottom: "5px" }}>Password</label>
 						<input
@@ -121,7 +122,7 @@ function SignUpForm() {
 						/>
 					</div>
 				</div>
-				<div className="row">
+				<div className="main__row">
 					<div className="col-sm-6 form-group">
 						<label htmlFor="gender" style={{ display: "block", marginBottom: "5px" }} >Gender</label>
 						<select
@@ -142,7 +143,7 @@ function SignUpForm() {
 
 					</div>
 				</div>
-				<div className="row">
+				<div className="main__row">
 					<div className="col-sm-6 form-group">
 						<label htmlFor="dateOfBirth" style={{ display: "block", marginBottom: "5px" }}>Date of Birth</label>
 						<input
@@ -157,12 +158,12 @@ function SignUpForm() {
 						/>
 					</div>
 				</div>
-				<button
-					className="main__submit">
-					Sign Up
-				</button>
+				
+                <input className="btn btn-primary" type="submit" value="Signup" />
+
 			</form>
 		</main>
+		</div>
 	)
 }
 
