@@ -1,6 +1,8 @@
 import TinderCard from "react-tinder-card"
 import { useState } from "react"
 import ChatContainer from '../components/chatContainer'
+import Settings from "../components/settings"
+import fanterlogo from "../images/fanterlogo.png";
 
 const Dashboard = () =>{
   const characters = [
@@ -41,11 +43,17 @@ const Dashboard = () =>{
   }
 
   return (
+    
     <div className="dashboard">
+       <img className="fanterlogo" src={fanterlogo} alt="top-left-icon"/>
+      <div className="settingsBar">
+                <Settings></Settings>
+      </div>
       <ChatContainer/>
+    
       <div className="swipe-container">
       <div className="card-container">
-
+      
 
       {characters.map((character) =>
           <TinderCard className='swipe' key={character.name} onSwipe={(dir) => swiped(dir, character.name)} onCardLeftScreen={() => outOfFrame(character.name)}>
