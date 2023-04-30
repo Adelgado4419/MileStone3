@@ -29,7 +29,7 @@ function LoginForm() {
         if (response.status === 200) {
             setCurrentUser(data.user)
             localStorage.setItem('token', data.token)
-            navigate(`/dashboard`)
+            navigate(`/dashboard/${data.user.username}`)
         } else {
             setErrorMessage(data.message)
         }
