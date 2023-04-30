@@ -18,22 +18,22 @@ auth.post('/', async (req, res) => {
     }
 })
 
-// auth.get('/profile', async (req, res) => {
-//     try {
-//         let user = await User.findOne({
-//             where: {
-//                 Id: req.session.Id
-//             }
-//         })
-//         res.json(user)
-//     } catch (error) {
-//         console.log(error)
-//     }
-// })
-
-auth.get('/profile', async (req,res) => {
-    res.json(req.currentUser)
+auth.get('/profile', async (req, res) => {
+    try {
+        let user = await User.findOne({
+            where: {
+                Id: req.session.Id
+            }
+        })
+        res.json(user)
+    } catch (error) {
+        console.log(error)
+    }
 })
+
+// auth.get('/profile', async (req,res) => {
+//     res.json(req.currentUser)
+// })
 
 
 
