@@ -47,18 +47,19 @@ function ProfileSettings() {
     }
 
 	return (
+	<div className="edit_profile">
 		<main>
 
-			<Link to='/' style={{textDecoration:'none'}}>
+			<Link to='/dashboard/:username/' style={{textDecoration:'none'}}>
 				<button
 					className="main__back" >
 					Go Back
 				</button>
 			</Link>
 
-			<h2>Profile Settings</h2>
-			<form onSubmit={handleSubmit}>
-				<div className="row">
+
+			<form className="main__form" onSubmit={handleSubmit}>
+				<div className="main__row">
 					<div className="col-sm-6 form-group">
 						<label htmlFor="firstName" style={{ display: "block", marginBottom: "5px" }}>First Name</label>
 						<input
@@ -73,6 +74,8 @@ function ProfileSettings() {
 							style={{ marginBottom: "10px" }}
 						/>
 					</div>
+				</div>
+					<div className="main__row">
 					<div className="col-sm-6 form-group">
 						<label htmlFor="lastName" style={{ display: "block", marginBottom: "5px" }}>Last Name</label>
 						<input
@@ -87,7 +90,7 @@ function ProfileSettings() {
 						/>
 					</div>
 				</div>
-				<div className="row">
+				<div className="main__row">
 					<div className="col-sm-6 form-group">
 						<label htmlFor="username" style={{ display: "block", marginBottom: "5px" }}>User Name</label>
 						<input
@@ -103,7 +106,7 @@ function ProfileSettings() {
 						/>
 					</div>
 				</div>
-				<div className="row">
+				<div className="main__row">
 					<div className="col-sm-6 form-group">
 						<label htmlFor="gender" style={{ display: "block", marginBottom: "5px" }} >Gender</label>
 						<select
@@ -125,7 +128,7 @@ function ProfileSettings() {
 
 					</div>
                 </div>
-				<div className="row">
+				<div className="main__row">
 					<div className="col-sm-6 form-group">
 						<label htmlFor="email" style={{ display: "block", marginBottom: "5px" }}>Email</label>
 						<input
@@ -141,12 +144,10 @@ function ProfileSettings() {
 						/>
 					</div>
 				</div>
-				<button
-					className="main__submit">
-					Profile Settings
-				</button>
+				<input className="btn btn-primary" type="submit" value="Edit" />
 			</form>
 		</main>
+	</div>
 	)
 }
 
