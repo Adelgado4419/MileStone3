@@ -15,7 +15,7 @@ function SecuritySettings() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`/api/` + id)
+            const response = await fetch(`http://localhost:4005/api/` + id)
             const data = await response.json()
             console.log(data)
             setCurrentUser(data)
@@ -27,7 +27,7 @@ function SecuritySettings() {
     const handleSubmit = async(e) => {
         e.preventDefault()
         navigate(`/dashboard/${currentUser.username}`)
-        const response = await fetch(`/auth/${id}`, {
+        const response = await fetch(`http://localhost:4005/auth/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

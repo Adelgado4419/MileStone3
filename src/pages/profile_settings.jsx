@@ -20,7 +20,7 @@ function ProfileSettings() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`/api/` + id)
+            const response = await fetch(`http://localhost:4005/api/` + id)
             const data = await response.json()
             console.log(data)
             setCurrentUser(data)
@@ -33,7 +33,7 @@ function ProfileSettings() {
         e.preventDefault()
         navigate(`/dashboard/${currentUser.username}`)
             try{
-                const response = await fetch(`/api/${id}`, {
+                const response = await fetch(`http://localhost:4005/api/${id}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
