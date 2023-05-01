@@ -12,42 +12,135 @@
     height: 100vh;
   }
   
-  
-  
   .swipe {
     position: absolute;
-    
+    z-index: 1;
   }
   
   .dashboard .card-container {
-    width: 400px;
-    height: 650px;
+   position: relative;
+   width: 450px;
+   height: 600px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
   }
   
-  .card {
+  .card-container .card {
     position: relative;
     left: 40px;
     top: 40px;
-    background-color: #fff;
+    background: linear-gradient( grey, white);
     width: 400px;
     height: 650px;
     border-radius: 20px;
     background-size: cover;
     background-position: center;
-   
+    overflow: hidden;
   }
-  
-  .card h3 {
-    margin-top: 0;
-    text-align:  center;
-    color: rgb(70, 116, 128);
+
+  .card-container .card .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    z-index: 1;
+    transform-origin: top;
+    overflow: hidden;
+    border-radius: 20px;
   }
-  
+  .card-container .card:hover .imgBx {
+
+    transform: translateY(30px) scale(0.5)
+  }
+  .card-container .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.card-container .card .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 60px;
+  margin-left: 120px;
+}
+
+.card-container .card .content .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.details h3 {
+  color:rgb(70, 116, 128);
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.social_icons {
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+  margin-right: 130px;
+}
+
+.social_icons li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.social_icons p {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:rgb(70, 116, 128);
+  border-radius: 50%;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.social_icons p:hover {
+  transform: rotate(360deg);
+}
+
+.card-container .card .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card-container .card .title h3 {
+  color: rgb(70, 116, 128);
+  font-size: 1.2em;
+  font-weight: 500;
+}
   .dashboard .swipe-info{
     position: absolute;
     bottom: 0;
     padding: 160px;
   }
+
 
 .chat-container {
     background-color: rgb(255, 255, 255);
