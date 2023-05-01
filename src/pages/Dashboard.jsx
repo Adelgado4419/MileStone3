@@ -1,4 +1,5 @@
-// import TinderCard from "react-tinder-card"
+
+import * as Aicons from 'react-icons/ai'
 import { useState, useEffect } from "react"
 import ChatContainer from '../components/chatContainer'
 import Settings from "../components/settings"
@@ -38,11 +39,13 @@ const Dashboard = () =>{
                 </div>
                 <div className="content"> 
                   <div className="details">
-                  <h3>{user.email}</h3>
+                  <h3>{user.first_name} {user.last_name}</h3>
                   <h3>{user.dateOfBirth}</h3>
-                  <h3>{user.first_name}</h3>
-                  <h3>{user.last_name}</h3>
                   </div>
+                  <ul class='social_icons'>
+                    <li><p><Aicons.AiOutlineCheckCircle/></p></li>
+                    <li><p><Aicons.AiOutlineDislike/></p></li>
+                  </ul>
                 </div>
               </div>
           </div>

@@ -45,6 +45,10 @@ module.exports = (sequelize, DataTypes) => {
     dateOfBirth:{
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    src:{
+      type: DataTypes.STRING,
+      allowNull: true,
     }
   }, {
     sequelize,
