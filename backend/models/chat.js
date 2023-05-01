@@ -5,6 +5,7 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Chat extends Model {
     static associate(models) {
+      this.belongsTo(user, {foreignKey: 'id', as: 'from_userId'})
     }
   }
   Chat.init({
@@ -14,14 +15,18 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    from_userId: DataTypes.INTEGER,
-    allowNull: false,
-
-    to_userId: DataTypes.INTEGER,
-    allowNull: false,
-
-    message: DataTypes.STRING,
-    allowNull: false
+    from_userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    to_userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    message: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
   }, {
     sequelize,
     modelName: 'Chat',

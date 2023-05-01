@@ -32,6 +32,9 @@ module.exports = {
       },
       dateOfBirth: {
         type: Sequelize.STRING
+      },
+      src:{
+        type: Sequelize.STRING
       }
     });
   },
