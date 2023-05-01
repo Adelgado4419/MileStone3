@@ -1,76 +1,69 @@
-// @import "config";
-// @import "media-queries";
+@import "config";
+@import "media-queries";
 
-// .row {
-//     width: 400px;
-//     padding: 40px;
-//     background-color: $secondary-color;
-//     border-radius: 10px;
 
-//     h2 {
-//         text-align: center;
-//         color: $tertiary-color;
-//         margin: 0 0 2rem;
-//     }
+%align-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-//     .email {
-//         position: relative;
-//         margin-bottom: 1rem;
+.bg {
+    background-image: url('../assets/backdropv5.png');
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 
-//         input {
-//             background: transparent;
-//             border: none;
-//             border-bottom: 1px solid white;
-//             width: 100%;
-//             margin-bottom: 2rem;
-//             font-size: 16px;
-//             padding: 3px;
-//             color: $secondary-color;
-//             outline: none;
-//         }
+    @include mobile {
+        height: auto;
+        width: auto;
+    }
+}
 
-//         label {
-//             position: absolute;
-//             top: 0;
-//             left: 0;
-//             color: $tertiary-color;
-//             transition: all 0.3s ease;
-//         }
-//     }
 
-//         input:valid ~ label,
-//         input:focus ~ label {
-//             top: -20px;
-//             left: 0;
-//             color: red;
-//             font-size: 12px;
-//             outline: none;
-//         }
-        
-//     a {
-//         color: $tertiary-color;
-//         text-decoration: none;
-//         text-transform: uppercase;
-//         letter-spacing: 2px;
-//         padding: 10px;
-//         position: relative;
-//         display: inline-block;
-//         transition: all 0.3s ease;
-//         cursor: pointer;
-//     }
+.main__login {
+        background: #55acf3;
+        padding: 1.5em;
+        border-radius: 1em;
+        width: 30%;
+        margin: auto;
+        margin-top: 10%;
+        width: 500px;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+        position: relative;
+        border-radius: 10px;
+        grid-template-columns: 1fr 1fr;
+        @extend %align-center;
 
-//     a:hover {
-//         background-color: $secondary-color;
-//         color: $primary-color;
-//         border-radius: 5px;
-//         box-shadow: 0 0 5 px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+    }
 
-//     }
 
-//     @include tablet {
-//         position: absolute;
-//         top: 22px;
-//         right: 20px;
-//         font-size: 2rem;
-//         }
-// }
+.btn {
+    display: flex;
+    color: $tertiary-color;
+    background-color: $secondary-color;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    margin-left: 40px;
+    object-fit: cover;
+    object-position: bottom;
+    text-align: right;
+
+
+    &:hover {
+        color: $tertiary-color;
+        transition: all 0.3s ease;
+        background-color: white;
+
+    }
+
+    @include mobile {
+        height: auto;
+        width: auto;
+    }
+}
