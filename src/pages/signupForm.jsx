@@ -2,8 +2,11 @@ import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { Link } from 'react-router-dom'
 import Aquaman from '../images/canvaPhotos/SelectFew/Aqua_man.png'
-import aang from '..images/canvaPhotos/SelectFew/captianmarvel.png'
-
+import Aang from '../images/canvaPhotos/SelectFew/aang.png'
+import CaptainMarvel from '../images/canvaPhotos/SelectFew/captainmarvel.png'
+import DarthVader from '../images/canvaPhotos/SelectFew/darthvader.png'
+import Goku from '../images/canvaPhotos/SelectFew/goku.png'
+import Mario from '../images/canvaPhotos/SelectFew/mario.png'
 
 
 function SignUpForm() {
