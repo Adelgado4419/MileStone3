@@ -3,33 +3,29 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Chat extends Model {
+  class matches extends Model {
     static associate(models) {
-      this.belongsTo(user, {foreignKey: 'id', as: 'from_userId'})
+      this.belongsTo(user, {foreignKey: 'id', as: 'user_id'})
     }
   }
-  Chat.init({
+  matches.init({
     id: {
       allowNull: false,
       autoIncrement: true,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    matchid: {
       primaryKey: true,
-      type: DataTypes.INTEGER
-    },
-    from_userId: {
+      type: DataTypes.INTEGER,
+      },
+    user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-    },
-    to_userId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    message: {
-      type: DataTypes.STRING,
-      allowNull: false
     },
   }, {
     sequelize,
-    modelName: 'Chat',
+    modelName: 'matches',
   });
-  return Chat;
+  return matches;
 };
