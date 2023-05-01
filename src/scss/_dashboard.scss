@@ -1,0 +1,162 @@
+
+// @import "config";
+// @import "media-queries";
+
+
+
+// .dashboard {
+//     display: flex;
+//     justify-content: space-between;
+  
+//     .swipe-container {
+//       width: 70%;
+//       display: flow-root;
+//       flex-direction: column;
+//       justify-content: center;
+//       align-items: center;
+//       height: 100vh;
+  
+//       .swipe {
+//         position: absolute;
+//       }
+//     }
+  
+//     .card-container {
+//       width: 400px;
+//       height: 650px;
+  
+//       .card {
+//         position: relative;
+//         left: 40px;
+//         top: 40px;
+//         background-color: #fff;
+//         width: 400px;
+//         height: 650px;
+//         border-radius: 20px;
+//         background-size: cover;
+//         background-position: center;
+  
+//         h3 {
+//           margin-top: 0;
+//           text-align:  center;
+//           color: rgb(70, 116, 128);
+//         }
+
+//         @include mobile {
+//           height: auto;
+//           width: auto;
+//       }
+//       }
+  
+//       .swipe-info {
+//         position: absolute;
+//         bottom: 0;
+//         padding: 160px;
+//       }
+
+     
+//     }
+//   }
+  
+//   .chat-container {
+//     background-color: rgb(255, 255, 255);
+//     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+//       rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+//     width: 30%;
+//     text-align: left;
+//     z-index: 0;
+//     margin: 10px;
+  
+//     .chat-container-head {
+//       background: linear-gradient(45deg, #1B98FC, #B8E2ED);
+//       height: 100px;
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//     }
+  
+//     .option {
+//       border: none;
+//       background-color: rgb(255, 255, 255);
+//       border-bottom: solid 4px #1B98FC;
+//       font-size: 20px;
+//       margin: 2px;
+//       padding: 10px;
+  
+//       &:disabled {
+//         border-bottom: solid 4px rgb(187, 187, 187);
+//       }
+
+//       @include mobile {
+//         height: auto;
+//         width: auto;
+//     }
+//     }
+  
+//     .match-chat-container {
+//       margin-top: 20px;
+//     }
+  
+//     .profile,
+//     .log-out {
+//       display: flex;
+//       align-items: center;
+//       padding: 20px;
+//       color: rgb(255, 255, 255);
+
+//       @include mobile {
+//         height: auto;
+//         width: auto;
+//     }
+//     }
+  
+//     .pfp-container {
+//       height: 30px;
+//       width: 30px;
+//       border-radius: 15px;
+//       overflow: hidden;
+//       margin: 10px;
+  
+//       img {
+//         width: 100%;
+
+//       }
+
+//       @include mobile {
+//         height: auto;
+//         width: auto;
+//     }
+//     }
+  
+//     // Chat Display
+//     .chat-display,
+//     .matches-display {
+//       padding: 20px;
+//       height: 60vh;
+//       overflow-y: auto;
+
+//       @include mobile {
+//         height: auto;
+//         width: auto;
+//     }
+//     }
+  
+//     // Chat Input
+//     .chat-input {
+//       padding: 20px;
+//       display: flex;
+//       flex-direction: column;
+//       margin-top: 600px;
+      
+//       @include mobile {
+//         height: auto;
+//         width: auto;
+//     }
+
+//     }
+  
+//     .chat {
+//       stroke: aquamarine;
+//     }
+//   }
+  

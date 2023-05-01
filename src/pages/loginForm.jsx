@@ -1,11 +1,12 @@
-import { useContext, useState, useEffect} from "react"
+import { useContext, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { UserContext } from "../contexts/CurrentUser"
+import fanterlogo from "../assets/fanterlogo.png"
 
 function LoginForm() {
     const navigate = useNavigate()
 
-    const {currentUser, setCurrentUser} = useContext(UserContext)
+    const { setCurrentUser } = useContext(UserContext)
 
     const [credentials, setCredentials] = useState({
         email: '',
@@ -16,7 +17,7 @@ function LoginForm() {
 
     async function handleSubmit(e) {
         e.preventDefault()
-        const response = await fetch(`auth`, {
+        const response = await fetch(`http://localhost:4005/auth`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -28,7 +29,6 @@ function LoginForm() {
 
         if (response.status === 200) {
             setCurrentUser(data.user)
-            localStorage.setItem('token', data.token)
             navigate(`/dashboard/${data.user.username}`)
         } else {
             setErrorMessage(data.message)
@@ -36,8 +36,8 @@ function LoginForm() {
     }
 
     return (
-        <main>
-            <h1>Login</h1>
+    <div className="bg">
+\        <main>
             {errorMessage !== null
                 ? (
                     <div className="alert alert-danger" role="alert">
@@ -46,10 +46,10 @@ function LoginForm() {
                 )
                 : null
             }
-            <form onSubmit={handleSubmit}>
+            <form className="main__login" onSubmit={handleSubmit}>
                 <div className="row">
                     <div className="col-sm-6 form-group">
-                        <label htmlFor="email">Email</label>
+                        <label htmlFor="email"  style={{ display: "block", marginBottom: "5px" }} >Email</label>
                         <input
                             type="email"
                             required
@@ -61,7 +61,7 @@ function LoginForm() {
                         />
                     </div>
                     <div className="col-sm-6 form-group">
-                        <label htmlFor="password">Password</label>
+                        <label htmlFor="password"  style={{ display: "block", marginBottom: "5px", }}>Password</label>
                         <input
                             type="password"
                             required
@@ -75,7 +75,11 @@ function LoginForm() {
                 </div>
                 <input className="btn btn-primary" type="submit" value="Login" />
             </form>
+            <div className="logo-container">
+            <img className="nav__logo" src={fanterlogo} alt="logo"/>
+            </div>
         </main>
+    </div>
     )
 }
 

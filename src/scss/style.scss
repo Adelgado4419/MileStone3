@@ -1,41 +1,30 @@
-@import "config";
-@import "nav";
-@import "media-queries";
-// @import "login-form";
-@import "signup-form";
+@import "config", "nav", "settings", "signup-form", "login-form", "dashboard", "media-queries";
 
-*{
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: $font-stack;
-  
+
+  @include mobile {
+    height: auto;
+    width: auto;
+}
 }
 
 body {
     background-color: $primary-color;
     color: $secondary-color;
+
+    @include mobile {
+      height: auto;
+      width: auto;
+  }
   }
 
 
-h1 {
-    text-align: center;
-    font-size: 4rem;
 
-  @include mobile{
-      font-size: 1.5rem;
-          }
-  }
-
-  h2 {
-    text-align: center;
-    color: $secondary-color;
-    margin: 0 0 2rem;
-
-    @include mobile{
-      font-size: 1.5rem;
-          }
-  }
 
 .backdrop{
     display: block;
@@ -51,5 +40,4 @@ h1 {
         height: auto;
         width: auto;
     }
-
-}
+  }

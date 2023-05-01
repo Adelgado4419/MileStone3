@@ -5,13 +5,13 @@ const Nav = () => {
 
     return (
         <div>
-                <Link to='/login' className="nav__login">
+                <Link to='/login' className="nav__login" style={{textDecoration:'none'}}>
                 <h5>log in</h5>
                 </Link>
         <div className="logo-container">
         <img className="nav__logo" src={fanterlogo} alt="logo"/>
         </div>
-                <Link to='/signup' className="nav__signup">
+                <Link to='/signup' className="nav__signup" style={{textDecoration:'none'}}>
                 <h5>sign up</h5>
                 </Link>
         </div>
