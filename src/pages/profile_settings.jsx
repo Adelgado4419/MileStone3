@@ -11,11 +11,11 @@ function ProfileSettings() {
     const {id} = useParams()
 	const [user, setUser] = useState({
         passwordDigest: currentUser.passwordDigest,
-        email: currentUser.email,
 		first_name: '',
 		last_name: '',
 		username: '',
 		gender: '',
+		email: ''
 	})
 
     useEffect(() => {
@@ -125,6 +125,22 @@ function ProfileSettings() {
 
 					</div>
                 </div>
+				<div className="row">
+					<div className="col-sm-6 form-group">
+						<label htmlFor="email" style={{ display: "block", marginBottom: "5px" }}>Email</label>
+						<input
+							placeholder="Email"
+							type="email"
+							required
+							defaultValue={currentUser.email}
+							onChange={e => setUser({ ...user, email: e.target.value })}
+							className="form-control"
+							id="email"
+							name="email"
+							style={{ marginBottom: "10px" }}
+						/>
+					</div>
+				</div>
 				<button
 					className="main__submit">
 					Profile Settings
