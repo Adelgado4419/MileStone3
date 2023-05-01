@@ -5,7 +5,7 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class matches extends Model {
     static associate(models) {
-      this.belongsTo(user, {foreignKey: 'id', as: 'user_id'})
+      this.belongsTo(user, {foreignKey: 'user_id', as: 'id'})
     }
   }
   matches.init({
