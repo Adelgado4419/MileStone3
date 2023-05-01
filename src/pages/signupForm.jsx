@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { Link } from 'react-router-dom'
+import Aquaman from '../images/canvaPhotos/SelectFew/Aqua_man.png'
+import aang from '..images/canvaPhotos/SelectFew/captianmarvel.png'
+
+
 
 function SignUpForm() {
 
@@ -40,6 +44,7 @@ function SignUpForm() {
 					Go Back
 				</button>
 			</Link>
+			
 			<form className="main__form" onSubmit={handleSubmit}>
 				<div className="main__row">
 					<div className="col-sm-6 form-group">
@@ -154,6 +159,28 @@ function SignUpForm() {
 							name="dateOfBirth"
 							style={{ marginBottom: "10px" }}
 						/>
+					</div>
+				</div>
+				<div className="main__row">
+					<div className="col-sm-6 form-group">
+						<label htmlFor="picture" style={{ display: "block", marginBottom: "5px" }} >Gender</label>
+						<select
+							placeholder="picture"
+							required
+							value={user.src}
+							onChange={e => setUser({ ...user, src: e.target.value })}
+							className="form-control"
+							id="picture"
+							name="picture"
+							style={{ marginBottom: "10px" }}
+						>
+							<option value=''></option>
+							<option value=''></option>
+							<option value=''></option>
+							<option value=''></option>
+							<option value=''></option>
+						</select>
+
 					</div>
 				</div>
 				
