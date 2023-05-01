@@ -20,10 +20,6 @@ const Dashboard = () =>{
     fetchData()
   }, [])
 
-  const addToMatches = async (matches) => {
-    
-    const{data, error} = await supabase.from("matches").insert({match_id: match.id, user_id: user.id})
-  }
   return (
     <div className="dashboard">
       <div className="settingsBar"><Settings></Settings></div>

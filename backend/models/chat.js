@@ -4,9 +4,6 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Chat extends Model {
-    static associate(models) {
-      this.belongsTo(user, {foreignKey: 'id', as: 'from_userId'})
-    }
   }
   Chat.init({
     id: {

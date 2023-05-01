@@ -4,9 +4,6 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class matches extends Model {
-    static associate(models) {
-      this.belongsTo(user, {foreignKey: 'user_id', as: 'id'})
-    }
   }
   matches.init({
     id: {
