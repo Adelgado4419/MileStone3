@@ -3,6 +3,7 @@ import * as Aicons from 'react-icons/ai'
 import { useState, useEffect } from "react"
 import ChatContainer from '../components/chatContainer'
 import Settings from "../components/settings"
+
 import fanterlogo from "../images/fanterlogo.png";
 
 import '../css/settings.css'
@@ -19,6 +20,10 @@ const Dashboard = () =>{
     fetchData()
   }, [])
 
+  const addToMatches = async (matches) => {
+    
+    const{data, error} = await supabase.from("matches").insert({match_id: match.id, user_id: user.id})
+  }
   return (
     <div className="dashboard">
       <div className="settingsBar"><Settings></Settings></div>
@@ -27,6 +32,7 @@ const Dashboard = () =>{
         <div className="card-container">
            
       <div className="card-container">
+
       {Users.map((user,index) => {
            return (
               <div className='swipe'>

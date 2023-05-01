@@ -21,12 +21,7 @@ app.use(cookieSession({
 //cors
 const corsOptions = {
     credentials: true,
-    origin: [
-        'http://localhost:3000',
-        'https://localhost:3000',
-        'http://localhost:4005',
-        'https://localhost:4005'
-    ]
+    origin: 'https://fanter.onrender.com/'
 }
 
 app.use(cors(corsOptions))
