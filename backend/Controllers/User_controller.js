@@ -48,6 +48,7 @@ users.put('/:id', async (req, res) => {
     try {
         const updatedUser = await User.update(req.body, {
             where: { id: req.params.id }
+           
         })
         res.status(200).json({
             message: `User ${req.params.id} updated successfully`
@@ -59,17 +60,16 @@ users.put('/:id', async (req, res) => {
 })
 
 // DELETE users BY ID
-users.delete('/:id', async (req, res) => {
+users.delete('/user/:id', async (req, res) => {
     try {
-        const deletedUser = await User.destroy(req.body,{
-            where: { id: req.params.id }
-        })
-        res.status(200).json({
-            message: `User ${req.params.id} deleted successfully`
+        const DeletedUser = await User.destroy(req.body, {
+            where: {id: req.params.id },
+            truncate: true
         })
     } catch (err) {
-        res.status(500).json("server error")
+        res.status(500).json('server error')
         console.log(err)
     }
 })
+
 module.exports = users

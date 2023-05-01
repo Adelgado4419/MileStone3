@@ -28,7 +28,7 @@ function ProfileSettings() {
         }
         fetchData()
     }, [])
-	
+
     const handleSubmit = async(e) => {
         e.preventDefault()
         navigate(`/dashboard/${currentUser.username}`)
@@ -45,6 +45,24 @@ function ProfileSettings() {
                 console.error(error)
             }
     }
+
+	const handleDelete = async (e) => {
+        e.preventDefault()
+        // navigate('/')
+            try {
+                const response = await fetch(`http://localhost:4005/api/user/${id}`, {
+                    method: "DELETE",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(currentUser)
+                });
+                return await response.json();
+            } catch (error) {
+                console.error(error);
+            }
+    }
+
 
 	return (
 		<main>
@@ -143,7 +161,11 @@ function ProfileSettings() {
 				</div>
 				<button
 					className="main__submit">
-					Profile Settings
+					Change Profile
+				</button>
+				<button
+					className="main__submit" onClick={handleDelete}>
+					Delete Profile
 				</button>
 			</form>
 		</main>

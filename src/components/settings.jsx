@@ -1,7 +1,7 @@
 import * as Ficons from'react-icons/fi'
 import * as Aicons from 'react-icons/ai'
-import { Link } from 'react-router-dom'
-import { useState, useContext  } from 'react'
+import { useNavigate, Link, useParams} from 'react-router-dom'
+import { useState, useContext} from 'react'
 import '../css/settings.css'
 import { IconContext } from 'react-icons'
 import { UserContext } from '../contexts/CurrentUser'
@@ -9,9 +9,7 @@ import fanterlogo from "../images/fanterlogo.png";
 
 
 function Settings(){
-    
     const {currentUser, setCurrentUser} = useContext(UserContext)
-
     const [Sidebar, setSidebar] = useState(false)
     const showSidebar = () => setSidebar(!Sidebar)
     return(
@@ -36,9 +34,9 @@ function Settings(){
                             </Link>
                         </li>
                         <li key={2} className={'settings-text'}>
-                            <Link to={`/Edit/Security/${currentUser.id}`}>
+                            <Link to={'/Fake'}>
                             <Aicons.AiOutlineSecurityScan />
-                            <span>Security settings</span>
+                            <span>Fake Work</span>
                             </Link>
                         </li>
                         <li key={3} className={'settings-text'}>

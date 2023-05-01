@@ -3,9 +3,9 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class matches extends Model {
+  class Match extends Model {
   }
-  matches.init({
+  Match.init({
     id: {
       allowNull: false,
       autoIncrement: true,
@@ -22,7 +22,8 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {
     sequelize,
-    modelName: 'matches',
+    modelName: 'Match',
+    tableName: 'matches',
   });
-  return matches;
+  return Match;
 };

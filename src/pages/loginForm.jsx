@@ -29,7 +29,7 @@ function LoginForm() {
 
         if (response.status === 200) {
             setCurrentUser(data.user)
-            navigate(`/dashboard/${data.user.username}`)
+            navigate(`/dashboard/${data.user.id}`)
         } else {
             setErrorMessage(data.message)
         }

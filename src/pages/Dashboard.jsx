@@ -10,6 +10,7 @@ import '../css/settings.css'
 
 const Dashboard = () =>{
   const [Users, setUsers] = useState([])
+  const [OnPage, setOnPage] = useState(true)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,6 +21,11 @@ const Dashboard = () =>{
     fetchData()
   }, [])
 
+  const AddtoMatch = function() {
+    RemovefromPage()
+  }
+  const RemovefromPage = () => setOnPage(!OnPage)
+
   return (
     <div className="dashboard">
       <div className="settingsBar"><Settings></Settings></div>
@@ -28,25 +34,25 @@ const Dashboard = () =>{
         <div className="card-container">
            
       <div className="card-container">
-
-      {Users.map((user,index) => {
+      {Users.map((user, index) => {
            return (
               <div className='swipe'>
+              {/* <div className={OnPage ? 'card' : 'card-none'}> */}
               <div className='card'>
               <div className="title"> 
                   <h3>{user.username}</h3>
                 </div>
                 <div className="imgBx"> 
-                  <img src={fanterlogo}></img>
+                  <img src={fanterlogo} alt='profile pic'></img>
                 </div>
                 <div className="content"> 
                   <div className="details">
                   <h3>{user.first_name} {user.last_name}</h3>
                   <h3>{user.dateOfBirth}</h3>
                   </div>
-                  <ul class='social_icons'>
-                    <li><p><Aicons.AiOutlineCheckCircle/></p></li>
-                    <li><p><Aicons.AiOutlineDislike/></p></li>
+                  <ul key={index} className='social_icons'>
+                    <li><p onClick={AddtoMatch}><Aicons.AiOutlineCheckCircle/></p></li>
+                    <li><p onClick={RemovefromPage}><Aicons.AiOutlineDislike/></p></li>
                   </ul>
                 </div>
               </div>
