@@ -1,10 +1,7 @@
-
 import * as Aicons from 'react-icons/ai'
 import { useState, useEffect } from "react"
 import ChatContainer from '../components/chatContainer'
 import Settings from "../components/settings"
-
-import fanterlogo from "../images/fanterlogo.png";
 
 import '../css/settings.css'
 
@@ -43,7 +40,7 @@ const Dashboard = () =>{
                   <h3>{user.username}</h3>
                 </div>
                 <div className="imgBx"> 
-                  <img src={fanterlogo} alt='profile pic'></img>
+                  <img src={user.src} alt='profile pic'></img>
                 </div>
                 <div className="content"> 
                   <div className="details">

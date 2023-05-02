@@ -1,7 +1,7 @@
 const MatchDisplay = () => {
     return (
         <div className="matches-container">
-            no Matches
+           <p className='matches-text'>No Matches</p> 
         </div>
     )
 }

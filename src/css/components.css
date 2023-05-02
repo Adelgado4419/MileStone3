@@ -50,10 +50,12 @@
     transform-origin: top;
     overflow: hidden;
     border-radius: 20px;
+    /* display:none */
   }
   .card-container .card:hover .imgBx {
 
-    transform: translateY(30px) scale(0.5)
+    transform: translateY(30px) scale(0.5);
+    margin-top: 20px;
   }
   .card-container .card .imgBx img{
     position: absolute;
@@ -89,9 +91,16 @@
   display:none;
 }
 .details h3 {
-  color:rgb(70, 116, 128);
+  color: black;
   font-size: 1.2em;
   font-weight: 500;
+  background: linear-gradient(45deg, #1B98FC, #B8E2ED);
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  position: relative;
+
+  left: 10px;
 }
 
 .social_icons {
@@ -104,6 +113,7 @@
 .social_icons li {
   list-style: none;
   margin-left: 20px;
+  
 }
 
 .social_icons p {
@@ -118,6 +128,8 @@
   color: #fff;
   text-decoration: none;
   transition: 0.5s;
+  position: relative;
+  top: 40px;
 }
 
 .social_icons p:hover {
@@ -133,9 +145,14 @@
 }
 
 .card-container .card .title h3 {
-  color: rgb(70, 116, 128);
+  border-radius: 10px;
+  background: linear-gradient(45deg, #1B98FC, #B8E2ED);
+  color: Black;
   font-size: 1.2em;
   font-weight: 500;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 5px;
 }
   .dashboard .swipe-info{
     position: absolute;
@@ -171,9 +188,16 @@
     padding: 10px;
 }
 .matches-container{
+  background: linear-gradient( grey, white);
     margin-top: 20px;
     color: black;
     font-weight: 500;
+}
+.matches-container p{
+  height: 30px;
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 20px;
 }
 .chat-container .option:disabled {
     border-bottom: solid 4px rgb(187, 187, 187);
@@ -185,6 +209,10 @@
     align-items: center;
     padding: 20px;
     color: rgb(255, 255, 255);
+}
+.chat-container {
+  height: 90vh;
+  border-radius: 10px;
 }
 
 .pfp-container {
@@ -214,9 +242,40 @@
     display: flex;
     flex-direction: column;
     margin-top: 600px;
+    position: relative;
+    bottom: 60px;
 }
 
 
 .chat{
     stroke: aquamarine;
+}
+
+
+.form-text-box {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  padding-left: 20px;
+}
+
+.form-text-title {
+  color: black;
+}
+
+.form-button{
+  position: relative;
+  right: 15px;
+}
+
+
+.edit_profile {
+  background-image: url('../assets/Form-Background.png');
+  display: block;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 }

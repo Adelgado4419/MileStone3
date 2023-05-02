@@ -17,7 +17,7 @@ function Settings(){
             <img className="fanterlogo" src={fanterlogo} alt="top-left-icon"/>
             <IconContext.Provider value={{color: '#fff'}}>
             <Link to='#' className='menu-bars'>
-            <Ficons.FiSettings onClick={showSidebar}/>
+            <Ficons.FiSettings className='settings-icon' onClick={showSidebar}/>
             </Link>
      
         <div className={Sidebar ? 'setting-menu-active' : 'settings-menu'}>

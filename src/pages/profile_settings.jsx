@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from "react"
 import { useNavigate, useParams,} from "react-router-dom"
 import { Link } from 'react-router-dom'
 import { UserContext } from "../contexts/CurrentUser"
-
+import '../css/components.css'
 
 function ProfileSettings() {
 
@@ -68,7 +68,7 @@ function ProfileSettings() {
 	<div className="edit_profile">
 		<main>
 
-			<Link to='/dashboard/:username/' style={{textDecoration:'none'}}>
+			<Link to={`/dashboard/${currentUser.username}`} style={{textDecoration:'none'}}>
 				<button
 					className="main__back" >
 					Go Back
@@ -78,7 +78,7 @@ function ProfileSettings() {
 
 			<form className="main__form" onSubmit={handleSubmit}>
 				<div className="main__row">
-					<div className="col-sm-6 form-group">
+					<div className="form-text-title">
 						<label htmlFor="firstName" style={{ display: "block", marginBottom: "5px" }}>First Name</label>
 						<input
 							required
@@ -86,7 +86,7 @@ function ProfileSettings() {
 							placeholder="First Name"
 							defaultValue={currentUser.first_name}
 							onChange={e => setUser({ ...user, first_name: e.target.value })}
-							className="form-control"
+							className="form-text-box"
 							id="firstName"
 							name="firstName"
 							style={{ marginBottom: "10px" }}
@@ -94,14 +94,14 @@ function ProfileSettings() {
 					</div>
 				</div>
 					<div className="main__row">
-					<div className="col-sm-6 form-group">
+					<div className="form-text-title">
 						<label htmlFor="lastName" style={{ display: "block", marginBottom: "5px" }}>Last Name</label>
 						<input
 							placeholder="Last Name"
 							required
 							defaultValue={currentUser.last_name}
 							onChange={e => setUser({ ...user, last_name: e.target.value })}
-							className="form-control"
+							className="form-text-box"
 							id="lastName"
 							name="lastName"
 							style={{ marginBottom: "10px" }}
@@ -109,7 +109,7 @@ function ProfileSettings() {
 					</div>
 				</div>
 				<div className="main__row">
-					<div className="col-sm-6 form-group">
+					<div className="form-text-title">
 						<label htmlFor="username" style={{ display: "block", marginBottom: "5px" }}>User Name</label>
 						<input
 							placeholder="Username"
@@ -117,7 +117,7 @@ function ProfileSettings() {
 							required
 							defaultValue={currentUser.username}
 							onChange={e => setUser({ ...user, username: e.target.value })}
-							className="form-control"
+							className="form-text-box"
 							id="username"
 							name="username"
 							style={{ marginBottom: "10px" }}
@@ -125,21 +125,21 @@ function ProfileSettings() {
 					</div>
 				</div>
 				<div className="main__row">
-					<div className="col-sm-6 form-group">
+					<div className="form-text-title">
 						<label htmlFor="gender" style={{ display: "block", marginBottom: "5px" }} >Gender</label>
 						<select
 							placeholder="Gender"
 							required
 							defaultValue={currentUser.gender}
 							onChange={e => setUser({ ...user, gender: e.target.value })}
-							className="form-control"
+							className="form-text-box"
 							id="gender"
 							name="gender"
 							style={{ marginBottom: "10px" }}
 						>
                             <option >{currentUser.gender}</option>
-							<option value='man'>man</option>
-							<option value='woman'>woman</option>
+							<option value='man'>Male</option>
+							<option value='woman'>Female</option>
 							<option value='non/binary'>non/binary</option>
 							<option value='none'>prefer not to say</option>
 						</select>
@@ -147,7 +147,7 @@ function ProfileSettings() {
 					</div>
                 </div>
 				<div className="main__row">
-					<div className="col-sm-6 form-group">
+					<div className="form-text-title">
 						<label htmlFor="email" style={{ display: "block", marginBottom: "5px" }}>Email</label>
 						<input
 							placeholder="Email"
@@ -155,21 +155,23 @@ function ProfileSettings() {
 							required
 							defaultValue={currentUser.email}
 							onChange={e => setUser({ ...user, email: e.target.value })}
-							className="form-control"
+							className="form-text-box"
 							id="email"
 							name="email"
 							style={{ marginBottom: "10px" }}
 						/>
 					</div>
 				</div>
+				<div className="form-button">
 				<button
-					className="main__submit">
+					className="btn btn-primary">
 					Change Profile
 				</button>
 				<button
-					className="main__submit" onClick={handleDelete}>
+					className="btn btn-primary" onClick={handleDelete}>
 					Delete Profile
 				</button>
+				</div>	
 			</form>
 		</main>
 	</div>

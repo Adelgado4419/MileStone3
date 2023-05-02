@@ -31,6 +31,8 @@
 }
 
 .settings-menu-active {
+    position: relative;
+    top: 15px;
     display: flex;
     left: 0;
     transition: 350ms;
@@ -48,9 +50,9 @@
 }
 
 .settings-text a {
-    background-color: #060b26;
+    background-color:white;
     text-decoration: none;
-    color: #f5f5f5;
+    color: black;
     font-size: 18px;
     width: 100%;
     height: 100%;
@@ -69,7 +71,7 @@
 }
 
 .settings-bar-toggle {
-    background-color: #060b26;
+    background: linear-gradient( grey, white);
     width: 100%;
     height: 80px;
     display: flex;
@@ -85,6 +87,20 @@ span {
     width: 40px;
     height: 40px;
     position: relative;
-    top: 35px;
+    top: 15px;
     margin-left: 100px;
+}
+
+.settings-icon{
+    position: relative;
+    bottom: 20px;
+}
+
+.dashboard{
+    background-image: url('../assets/Dashboard-Background.png');
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }

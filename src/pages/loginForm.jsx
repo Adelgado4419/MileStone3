@@ -2,7 +2,7 @@ import { useContext, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { UserContext } from "../contexts/CurrentUser"
 import fanterlogo from "../assets/fanterlogo.png"
-
+import '../css/components.css'
 function LoginForm() {
     const navigate = useNavigate()
 
@@ -48,26 +48,26 @@ function LoginForm() {
             }
             <form className="main__login" onSubmit={handleSubmit}>
                 <div className="row">
-                    <div className="col-sm-6 form-group">
+                    <div className="form-text-title">
                         <label htmlFor="email"  style={{ display: "block", marginBottom: "5px" }} >Email</label>
                         <input
                             type="email"
                             required
                             value={credentials.email}
                             onChange={e => setCredentials({ ...credentials, email: e.target.value })}
-                            className="form-control"
+                            className="form-text-box"
                             id="email"
                             name="email"
                         />
                     </div>
-                    <div className="col-sm-6 form-group">
+                    <div className="form-text-title">
                         <label htmlFor="password"  style={{ display: "block", marginBottom: "5px", }}>Password</label>
                         <input
                             type="password"
                             required
                             value={credentials.password}
                             onChange={e => setCredentials({ ...credentials, password: e.target.value })}
-                            className="form-control"
+                            className="form-text-box"
                             id="password"
                             name="password"
                         />
