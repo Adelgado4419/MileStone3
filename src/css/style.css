@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Chewy&family=Handlee&display=swap");
-.edit_profile .main__form, .main__login, .main__form, .nav__logo {
+.edit_profile .main__form, .main__login, .bg, .main__form, .nav__logo {
   display: flex;
   align-items: center;
 }
@@ -148,10 +148,9 @@
   }
 }
 
-.edit_profile .main__form, .main__login, .main__form, .nav__logo {
+.edit_profile .main__form, .main__login, .bg, .main__form, .nav__logo {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .sign_up {
@@ -193,7 +192,7 @@
   background-color: white;
 }
 @media screen and (max-width: 280px) {
-  .main__back:hover {
+  .main__back {
     height: auto;
     width: auto;
   }
@@ -213,13 +212,19 @@
   flex-direction: column;
 }
 @media screen and (max-width: 280px) {
-  .main__form {
+  .main {
     height: auto;
     width: auto;
   }
 }
 .main__row {
   align-self: center;
+}
+@media screen and (max-width: 280px) {
+  .main__row {
+    height: auto;
+    width: auto;
+  }
 }
 .main .btn {
   display: flex;
@@ -247,7 +252,7 @@
   }
 }
 
-.edit_profile .main__form, .main__login, .nav__logo, .main__form {
+.edit_profile .main__form, .main__login, .bg, .nav__logo, .main__form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -281,6 +286,12 @@
   border-radius: 10px;
   grid-template-columns: 1fr 1fr;
 }
+@media screen and (max-width: 280px) {
+  .main__login {
+    height: auto;
+    width: auto;
+  }
+}
 
 .btn {
   display: flex;
@@ -308,7 +319,7 @@
   }
 }
 
-.edit_profile .main__form, .nav__logo, .main__form, .main__login {
+.edit_profile .main__form, .nav__logo, .main__form, .bg, .main__login {
   display: flex;
   align-items: center;
   justify-content: center;

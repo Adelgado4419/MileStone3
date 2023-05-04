@@ -78,21 +78,13 @@
         color: $tertiary-color;
         transition: all 0.3s ease;
         background-color: white;
-    
     }
+    
 
     @include mobile {
         height: auto;
         width: auto;
     }
-
-    // @include tablet {
-    //     position: absolute;
-    //     top: 22px;
-    //     right: 20px;
-    //     font-size: 2rem;
-    //     }
-
-      
+    
     }
 }

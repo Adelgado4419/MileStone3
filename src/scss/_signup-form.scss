@@ -5,7 +5,6 @@
 %align-center {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .sign_up {
@@ -46,12 +45,14 @@
             transition: all 0.3s ease;
             background-color: white;
 
+        }
+
             @include mobile {
                 height: auto;
                 width: auto;
             }
 
-        }
+    
     }
 
 
@@ -70,15 +71,21 @@
         flex-direction: column;
         @extend %align-center;
 
+    }        
           @include mobile {
             height: auto;
             width: auto;
         }
 
-    }
+
 
     &__row{
        align-self: center;
+
+       @include mobile {
+        height: auto;
+        width: auto;
+    }
        
     }
 
