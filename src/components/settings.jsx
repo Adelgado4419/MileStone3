@@ -19,7 +19,7 @@ function Settings(){
             <Link to='#' className='menu-bars'>
             <Ficons.FiSettings className='settings-icon' onClick={showSidebar}/>
             </Link>
-     
+
         <div className={Sidebar ? 'setting-menu-active' : 'settings-menu'}>
             <ul className='settings-menu-items'>
                         <li className='settings-bar-toggle'>

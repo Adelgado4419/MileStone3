@@ -29,10 +29,10 @@ const Dashboard = () =>{
       <ChatContainer/>
       <div className="swipe-container">
         <div className="card-container">
-           
+        
       <div className="card-container">
       {Users.map((user, index) => {
-           return (
+          return (
               <div className='swipe'>
               {/* <div className={OnPage ? 'card' : 'card-none'}> */}
               <div className='card'>

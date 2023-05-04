@@ -50,8 +50,8 @@ function SecuritySettings() {
 
 			<h2>Security Settings</h2>
 			<form onSubmit={handleSubmit}>
-               
-               <div className="row">
+            
+            <div className="row">
 					<div className="col-sm-6 form-group">
 						<label htmlFor="email" style={{ display: "block", marginBottom: "5px" }}>Email</label>
 						<input

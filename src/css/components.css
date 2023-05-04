@@ -18,12 +18,12 @@
   }
   
   .dashboard .card-container {
-   position: relative;
-   width: 450px;
-   height: 600px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+    position: relative;
+    width: 450px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .card-container .card {
