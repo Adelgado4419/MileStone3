@@ -2,13 +2,15 @@ import * as Aicons from 'react-icons/ai'
 import { useState, useEffect } from "react"
 import ChatContainer from '../components/chatContainer'
 import Settings from "../components/settings"
-
+import TinderCard from 'react-tinder-card'
+// import { supabase } from '../supabaseClient.js'
 import '../css/settings.css'
+
 
 const Dashboard = () =>{
   const [Users, setUsers] = useState([])
   const [OnPage, setOnPage] = useState(true)
-
+  const [message, setMessage] = useState("")
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch('http://localhost:4005/api')
@@ -23,17 +25,29 @@ const Dashboard = () =>{
   }
   const RemovefromPage = () => setOnPage(!OnPage)
 
+  // const matchUser = async (match) => {
+  //   const {data, error} = await supabase.from("matchlist").insert({match_id: match.id})
+  //   if(error) {
+  //     console.log(error)
+  //   }
+  //   if(data) {
+  //     setMessage("Match sent!")
+  //   }
+  // }
   return (
     <div className="dashboard">
       <div className="settingsBar"><Settings></Settings></div>
       <ChatContainer/>
       <div className="swipe-container">
         <div className="card-container">
-           
-      <div className="card-container">
+        
+        <div className="card-container">
+          
       {Users.map((user, index) => {
-           return (
+          return (
+            
               <div className='swipe'>
+                <TinderCard>
               {/* <div className={OnPage ? 'card' : 'card-none'}> */}
               <div className='card'>
               <div className="title"> 
@@ -53,11 +67,14 @@ const Dashboard = () =>{
                   </ul>
                 </div>
               </div>
+              </TinderCard>
           </div>
+          
           )
         }, 
           )
         } 
+        
         </div>
       </div>
     </div>

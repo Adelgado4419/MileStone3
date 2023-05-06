@@ -1,8 +1,8 @@
 # What is Fante?
-hello
-Fanter is a meetup/friendship site for animated characters that allows multi-verse companionship. 
+Hello!!
+Fanter is a meetup/friendship site for animated characters that allows multi-verse companionship that uses a PERN Stack. 
 
-# What is a PERN-Bucket list?
+# What is a PERN-stack?
 
 PERN-Full Stack
 
@@ -21,11 +21,12 @@ The PERN-Stack allows us to use all of these technologies to build an applicatio
 react-router-dom
 react
 SASS
+react-router-dom
 
 
 # How to use
 
-To use our site, please visit ______________________________
+To use our site, please visit https://fanter.onrender.com/.
 
 If you already have an account, press login on the top right. If you do not have an account, click on create account on the center of the page. 
 
@@ -62,7 +63,6 @@ If the user you liked, likes you  back, then you should be able to chat with the
 
 **Render** -  We used Render to deploy our code. It is what gives us the ability to have the following website active.
 
-
 **Supabase** - This site is what hosts our BucketList data online. This website allows us to push and pull data to and from our Azure web app. 
 
 **VSCode** -  This is a code editor that we used to build, edit and test code. VSCode comes with additional extensions like nodemon that allow us to test code. It also comes with a spell code for code as well, which is super useful with identifying bugs.
@@ -83,35 +83,20 @@ If the user you liked, likes you  back, then you should be able to chat with the
 | description | STRING |
 
 
+# Hear from the Authors!
 
-## Credit
+Alexis Delgado - Super excited about this project. I worked on the react router dom, the flow of the pages, and building structure. I also created the dashboard image using Canva!
 
+Jake Brown - I worked on the backend routes with jackson, and my favorite feature was the bcrypt login system
+I would have worked with the Match system more given we figured out the relational tables
 
-# Authors  - Work done!
+Yara Alfaro-Sullivan - I worked on front end styling incorporating newly learned SASS principles and created the logo using Canva.
 
-Alexis Delgado -
-
-Jake Brown - 
-
-Yara Alfaro-Sullivan - 
-
-Jacksen
+Jacksen - I worked on backend with Jake. My favorite feature is gone it was the swipe card but lets just say its the backend working.
+I would have started with what we couldnt finish. Wish list was the matches n chat
 
 # Wish List Items
 
 -User able to upload their own images
-
-
-
-# Hear from the Authors
-
-## Jake
-
-
-## Alex
-
-
-## Yara
-
-
-## Jacksen
+-a full functioning match dashboard
+-functioning chat board

@@ -1,0 +1,15 @@
+.work_mode {
+    /* position: fixed;  */
+    /* top: -30%;  */
+    /* left: -44%;  */
+    /* width: 100%;  */
+    /* height: 100%; */
+}
+.work_mode img {
+    height: auto;
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

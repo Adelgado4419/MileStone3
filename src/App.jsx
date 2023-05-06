@@ -7,6 +7,7 @@ import SignUpForm from './pages/signupForm'
 import LoginForm from './pages/loginForm'
 import ProfileSettings from './pages/profile_settings'
 import SecuritySettings from './pages/Security_settings'
+import Fake from './pages/ThisIsRealWork'
 
 const App = () => {
     const [currentUser, setCurrentUser] = useState(null)
@@ -37,6 +38,7 @@ const App = () => {
                 <Route path= "/Login" element={<LoginForm/>}/>
                 <Route path= "/Edit/:id" element={<ProfileSettings/>}/>
                 <Route path= "/Edit/Security/:id" element={<SecuritySettings/>}/>
+                <Route path= "/ThisIsRealWork" element={<Fake/>}/>
             </Routes>
         </BrowserRouter>
         </UserContext.Provider>

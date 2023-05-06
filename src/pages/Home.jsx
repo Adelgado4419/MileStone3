@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+
 import Nav from "../components/nav"
 import backdropv5 from '../assets/backdropv5.png'
 
@@ -10,7 +10,6 @@ function Home() {
         <Nav/>
         
         <img className="backdrop" src={backdropv5} alt="backdrop"/>
-
     </div>
   );
 }
