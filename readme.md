@@ -1,4 +1,4 @@
-# What is Fante?
+# What is Fanter?
 Hello!!
 Fanter is a meetup/friendship site for animated characters that allows multi-verse companionship that uses a PERN Stack. 
 
